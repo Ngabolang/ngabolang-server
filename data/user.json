@@ -1,0 +1,38 @@
+[
+  {
+    "username": "john_doe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.1.468604856.1683977961&semt=ais",
+    "phoneNumber": "085208520852",
+    "address": "123 Main Street"
+  },
+  {
+    "username": "jordan_wong",
+    "email": "jordanwong@example.com",
+    "password": "qwerty123",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/free-vector/young-man-landscape-character-scene_24877-57891.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "081208120812",
+    "address": "789 Oak Street"
+  },
+  {
+    "username": "jane_smith",
+    "email": "janesmith@example.com",
+    "password": "password456",
+    "role": "admin",
+    "photoProfile": "https://img.freepik.com/free-vector/young-woman-field-character-scene_24877-57892.jpg?size=626&ext=jpg&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085308530853",
+    "address": "456 Elm Avenue"
+  },
+  {
+    "username": "jackson_davis",
+    "email": "jacksondavis@example.com",
+    "password": "password789",
+    "role": "admin",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "789 Oak Street"
+  }
+]

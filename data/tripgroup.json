@@ -1,0 +1,30 @@
+[
+  {
+    "tripId": 1,
+    "customerId": 1,
+    "review": "",
+    "rating": 5,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 1,
+    "customerId": 2,
+    "review": "",
+    "rating": 5,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 2,
+    "customerId": 1,
+    "review": "",
+    "rating": 5,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 2,
+    "customerId": 2,
+    "review": "",
+    "rating": 5,
+    "paymentStatus": false
+  }
+]
