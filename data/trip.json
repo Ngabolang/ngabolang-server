@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Wisata Labuan Bajo Sailing Komodo",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat architecto necessitatibus tempora molestias explicabo delectus distinctio cupiditate esse totam, quibusdam ea vitae fugit natus numquam cumque, quisquam accusamus quis quam.",
+    "categoryId": 1,
+    "adminId": 3,
+    "date": "2023-08-17",
+    "price": 2000000,
+    "status": true,
+    "imgUrl": "https://res.klook.com/image/upload/Mobile/City/rv76yqukp2hey0fckh99.jpg",
+    "videoUrl": "https://www.youtube.com/watch?v=kQIri35Yjds",
+    "duration": 3,
+    "meetingPoint": "Jakarta",
+    "location": "Nusa Tenggara Timur",
+    "limit": 30
+  },
+  {
+    "name": "Wisata 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat architecto necessitatibus tempora molestias explicabo delectus distinctio cupiditate esse totam, quibusdam ea vitae fugit natus numquam cumque, quisquam accusamus quis quam.",
+    "categoryId": 3,
+    "adminId": 4,
+    "date": "2023-09-17",
+    "price": 500000,
+    "status": true,
+    "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
+    "videoUrl": "https://www.youtube.com/watch?v=kQIri35Yjds",
+    "duration": 2,
+    "meetingPoint": "Jakarta",
+    "location": "Bali",
+    "limit": 30
+  }
+]
