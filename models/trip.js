@@ -27,7 +27,9 @@ module.exports = (sequelize, DataTypes) => {
       videoUrl: DataTypes.STRING,
       duration: DataTypes.INTEGER,
       meetingPoint: DataTypes.STRING,
-      province: DataTypes.STRING,
+      location: DataTypes.STRING,
+      limit: DataTypes.INTEGER,
+      description: DataTypes.TEXT,
     },
     {
       sequelize,

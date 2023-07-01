@@ -9,11 +9,14 @@ module.exports = {
     await queryInterface.addColumn("Trips", "meetingPoint", {
       type: Sequelize.STRING,
     });
-    await queryInterface.addColumn("Trips", "province", {
+    await queryInterface.addColumn("Trips", "location", {
       type: Sequelize.STRING,
     });
     await queryInterface.addColumn("Trips", "limit", {
       type: Sequelize.INTEGER,
+    });
+    await queryInterface.addColumn("Trips", "description", {
+      type: Sequelize.TEXT,
     });
     /**
      * Add altering commands here.
@@ -27,6 +30,7 @@ module.exports = {
     await queryInterface.removeColumn("Trips", "meetingPoint");
     await queryInterface.removeColumn("Trips", "province");
     await queryInterface.removeColumn("Trips", "limit");
+    await queryInterface.removeColumn("Trips", "description");
 
     /**
      * Add reverting commands here.

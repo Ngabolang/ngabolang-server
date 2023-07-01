@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       startHour: DataTypes.TIME,
       longitude: DataTypes.STRING,
       latitude: DataTypes.STRING,
+      activity: DataTypes.TEXT,
     },
     {
       sequelize,
