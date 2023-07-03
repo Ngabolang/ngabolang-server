@@ -30,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       location: DataTypes.STRING,
       limit: DataTypes.INTEGER,
       description: DataTypes.TEXT,
+      chatId: DataTypes.STRING,
     },
     {
       sequelize,

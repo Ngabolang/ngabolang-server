@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { Category, Destination, Trip, TripGroup, User } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { OAuth2Client } = require("google-auth-library");
@@ -81,6 +81,176 @@ class Controller {
       });
     } catch (err) {
       next(err);
+    }
+  }
+
+  static async getTrips(req, res, next) {
+    try {
+      const trips = await Trip.findAll({
+        include: [
+          {
+            model: Category,
+          },
+          {
+            model: Destination,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      res.status(200).json(trips);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async getTripsByCategory(req, res, next) {
+    try {
+      const { category } = req.params;
+      const trips = await Trip.findAll({
+        include: [
+          {
+            model: Category,
+            where: { name: category },
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!trips) throw { name: "dataNotFound" };
+      res.status(200).json(trips);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async getTripsById(req, res, next) {
+    try {
+      const { id } = req.params;
+      const trips = await Trip.findAll({
+        where: { id },
+        include: [
+          {
+            model: Category,
+          },
+          {
+            model: Destination,
+          },
+          {
+            model: TripGroup,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!trips) throw { name: "dataNotFound" };
+      res.status(200).json(trips);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async getMyTrip(req, res, next) {
+    try {
+      const tripgroups = await TripGroup.findAll({
+        where: {
+          customerId: req.user.id,
+        },
+        include: [
+          {
+            model: Trip,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!tripgroups) throw { name: "dataNotFound" };
+      res.status(200).json(tripgroups);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async getUserBytripId(req, res, next) {
+    try {
+      const { tripId } = req.params;
+      const user = await User.findAll({
+        include: [
+          {
+            model: TripGroup,
+            where: { tripId },
+          },
+        ],
+        attributes: { exclude: "password" },
+        order: [["createdAt", "DESC"]],
+      });
+      if (!user) throw { name: "dataNotFound" };
+      res.status(200).json(user);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async createTripGroup(req, res, next) {
+    try {
+      const { tripId } = req.params;
+      const tripgroup = await TripGroup.create({
+        tripId: tripId,
+        customerId: req.user.id,
+      });
+      res.status(200).json(tripgroup);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async payment(req, res, next) {
+    try {
+      const { tripId } = req.params;
+      const tripgroup = await TripGroup.findOne({
+        where: {
+          customerId: req.user.id,
+          tripId: tripId,
+        },
+        include: [
+          {
+            model: Trip,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!tripgroup) throw { name: "dataNotFound" };
+      tripgroup.paymentStatus = true;
+      const patchedTripgroup = await tripgroup.save();
+
+      res.status(200).json(patchedTripgroup);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async review(req, res, next) {
+    try {
+      const { tripId } = req.params;
+      const { review, rating } = req.body;
+      const tripgroup = await TripGroup.findOne({
+        where: {
+          customerId: req.user.id,
+          tripId: tripId,
+        },
+        include: [
+          {
+            model: Trip,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!tripgroup) throw { name: "dataNotFound" };
+      tripgroup.set({
+        review,
+        rating,
+      });
+      const updatedTripgroud = await tripgroup.save();
+      res.status(200).json(updatedTripgroud);
+    } catch (error) {
+      console.log(error);
+      next(error);
     }
   }
 }
