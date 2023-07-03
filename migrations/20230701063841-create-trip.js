@@ -40,6 +40,7 @@ module.exports = {
       },
       status: {
         type: Sequelize.BOOLEAN,
+        defaultValue: true,
       },
       imgUrl: {
         type: Sequelize.STRING,

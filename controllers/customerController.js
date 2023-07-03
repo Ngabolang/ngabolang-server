@@ -1,3 +1,4 @@
+
 const { Category, Destination, Trip, TripGroup, User } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
@@ -72,7 +73,6 @@ class Controller {
           role: "customer",
         },
       });
-
       res.status(created ? 201 : 200).json({
         access_token: signToken({ id: user.id }),
         user: await User.findByPk(user.id, {

@@ -5,4 +5,25 @@ const authentication = require("../middlewares/authentication");
 router.post("/login", Controller.login);
 router.post("/register", authentication, Controller.register);
 
+//TRIP section
+router.get("/trip", authentication, Controller.getTrip);
+router.post("/trip", authentication, Controller.createTrip);
+router.get("/trip/:id", authentication, Controller.getTripById);
+router.put("/trip/:id", authentication, Controller.editTrip);
+router.delete("/trip/:id", authentication, Controller.deleteTrip);
+router.patch("/trip/:id", authentication, Controller.updateStatus);
+router.get(
+  "/destination/:tripId",
+  authentication,
+  Controller.getDestinationByTripId
+);
+
+// CATEGORY section
+router.get("/category", authentication, Controller.getCategory);
+router.post("/category", authentication, Controller.createCategory);
+router.put("/category/:id", authentication, Controller.editCategory);
+router.delete("/category/:id", authentication, Controller.deleteCategory);
+
+router.get("/user", authentication, Controller.getLoggedInUser);
+
 module.exports = router;

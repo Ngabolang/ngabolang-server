@@ -21,6 +21,7 @@ module.exports = {
     await queryInterface.addColumn("Trips", "chatId", {
       type: Sequelize.STRING,
     });
+
   },
 
   async down(queryInterface, Sequelize) {
@@ -30,5 +31,6 @@ module.exports = {
     await queryInterface.removeColumn("Trips", "limit");
     await queryInterface.removeColumn("Trips", "description");
     await queryInterface.removeColumn("Trips", "chatId");
+
   },
 };
