@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       longitude: DataTypes.STRING,
       latitude: DataTypes.STRING,
       activity: DataTypes.TEXT,
+      placeId: DataTypes.STRING,
     },
     {
       sequelize,

@@ -39,7 +39,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       photoProfile: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
       phoneNumber: {
         type: Sequelize.STRING,

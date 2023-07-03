@@ -5,9 +5,10 @@
     "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipPaE5Bmj1nDSYGuDWEZRrhUx9NFEnQ1AOL-Chrs=w408-h306-k-no",
     "labelDay": 1,
     "startHour": "09:00",
-    "longitude": "-8.54673581674982",
-    "latitude": "119.81622416875352",
-    "activity": "makan"
+    "latitude": "-8.54673581674982",
+    "longitude": "119.81622416875352",
+    "activity": "makan",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   },
   {
     "tripId": 1,
@@ -15,9 +16,10 @@
     "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipOf7kK1X9_RJnpVkj77m4oQuGpbQPqkHriD8syq=w426-h240-k-no",
     "labelDay": 1,
     "startHour": "12:00",
-    "longitude": "-8.568110718636364",
-    "latitude": "119.8088147469443",
-    "activity": "makan"
+    "latitude": "-8.568110718636364",
+    "longitude": "119.8088147469443",
+    "activity": "makan",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   },
   {
     "tripId": 1,
@@ -25,9 +27,10 @@
     "imgUrl": "https://asset.kompas.com/crops/EIIeOwuamrzRPRlozoGefPiYQa8=/0x0:0x0/750x500/data/photo/2021/08/09/6110f2cb657fe.jpg",
     "labelDay": 1,
     "startHour": "15:00",
-    "longitude": "-8.612804617327182",
-    "latitude": "119.48735557672023",
-    "activity": "makan"
+    "latitude": "-8.612804617327182",
+    "longitude": "119.48735557672023",
+    "activity": "makan",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   },
   {
     "tripId": 2,
@@ -35,9 +38,10 @@
     "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
     "labelDay": 1,
     "startHour": "04:00",
-    "longitude": "-8.612804617327182",
-    "latitude": "119.48735557672023",
-    "activity": "makan"
+    "latitude": "-8.612804617327182",
+    "longitude": "119.48735557672023",
+    "activity": "makan",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   },
   {
     "tripId": 2,
@@ -45,9 +49,10 @@
     "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
     "labelDay": 1,
     "startHour": "06:00",
-    "longitude": "-8.612804617327182",
-    "latitude": "119.48735557672023",
-    "activity": "makan"
+    "latitude": "-8.612804617327182",
+    "longitude": "119.48735557672023",
+    "activity": "makan",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   },
   {
     "tripId": 2,
@@ -55,8 +60,9 @@
     "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
     "labelDay": 2,
     "startHour": "06:00",
-    "longitude": "-8.612804617327182",
-    "latitude": "119.48735557672023",
-    "activity": "makan"
+    "latitude": "-8.612804617327182",
+    "longitude": "119.48735557672023",
+    "activity": "makan",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   }
 ]

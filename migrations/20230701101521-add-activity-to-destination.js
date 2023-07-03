@@ -6,19 +6,13 @@ module.exports = {
     await queryInterface.addColumn("Destinations", "activity", {
       type: Sequelize.TEXT,
     });
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     */
+    await queryInterface.addColumn("Destinations", "placeId", {
+      type: Sequelize.STRING,
+    });
   },
 
   async down(queryInterface, Sequelize) {
     await queryInterface.removeColumn("Destinations", "activity");
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     */
+    await queryInterface.removeColumn("Destinations", "placeId");
   },
 };
