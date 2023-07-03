@@ -14,6 +14,52 @@ module.exports = (sequelize, DataTypes) => {
       Trip.hasMany(models.Destination, { foreignKey: "tripId" });
       Trip.hasMany(models.TripGroup, { foreignKey: "tripId" });
     }
+    static async createTrips(body, adminId) {
+      const t = await sequelize.transaction();
+      try {
+        const Destination = sequelize.models.Destination;
+        const trip = await Trip.create(
+          {
+            name: body.name,
+            chatId: body.name,
+            categoryId: body.categoryId,
+            adminId: adminId,
+            date: body.date,
+            price: body.price,
+            status: false,
+            imgUrl: body.imgUrl,
+            videoUrl: body.videoUrl,
+            duration: body.duration,
+            meetingPoint: body.meetingPoint,
+            location: body.location,
+            limit: body.limit,
+            description: body.description,
+          },
+          { transaction: t }
+        );
+
+        const destinations = body.destinations.map((destination) => {
+          const obj = {
+            tripId: trip.id,
+            name: destination.name,
+            imgUrl: destination.imgUrl,
+            labelDay: destination.labelDay,
+            startHour: destination.startHour,
+            longitude: destination.longitude,
+            latitude: destination.latitude,
+            activity: destination.activity,
+          };
+          return obj;
+        });
+        const destination = await Destination.bulkCreate(destinations, {
+          transaction: t,
+        });
+        await t.commit();
+      } catch (error) {
+        console.log(error);
+        await t.rollback();
+      }
+    }
   }
   Trip.init(
     {
@@ -37,5 +83,8 @@ module.exports = (sequelize, DataTypes) => {
       modelName: "Trip",
     }
   );
+  Trip.beforeCreate((trip, options) => {
+    trip.chatId = trip.chatId.toLowerCase().split(" ").join("-");
+  });
   return Trip;
 };

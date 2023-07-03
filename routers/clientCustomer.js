@@ -3,6 +3,7 @@ const Controller = require("../controllers/customerController");
 const authentication = require("../middlewares/authentication");
 const authorization = require("../middlewares/authorization");
 
+
 router.post("/register", Controller.register);
 router.post("/login", Controller.login);
 router.post("/google-sign-in", Controller.googleSignIn);
@@ -14,5 +15,6 @@ router.get("/user/:tripId", Controller.getUserBytripId);
 router.post("/buy-trip/:tripId", authentication, Controller.createTripGroup);
 router.patch("/payment/:tripId", authentication, Controller.payment);
 router.put("/review/:tripId", authentication, authorization, Controller.review);
+
 
 module.exports = router;
