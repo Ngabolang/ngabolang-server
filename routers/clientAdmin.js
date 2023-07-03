@@ -12,7 +12,11 @@ router.get("/trip/:id", authentication, Controller.getTripById);
 router.put("/trip/:id", authentication, Controller.editTrip);
 router.delete("/trip/:id", authentication, Controller.deleteTrip);
 router.patch("/trip/:id", authentication, Controller.updateStatus);
-// router.put("/destination/:id", authentication, Controller.editDestination);
+router.get(
+  "/destination/:tripId",
+  authentication,
+  Controller.getDestinationByTripId
+);
 
 // CATEGORY section
 router.get("/category", authentication, Controller.getCategory);

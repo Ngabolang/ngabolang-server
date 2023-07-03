@@ -258,6 +258,18 @@ class Controller {
       next(error);
     }
   }
+
+  //destination section
+  static async getDestinationByTripId(req, res, next) {
+    try {
+      const { tripId } = req.params;
+      const destinations = await Destination.findAll({ where: { tripId } });
+      res.status(200).json(destinations);
+    } catch (error) {
+      console.log(error);
+      next(error);
+    }
+  }
 }
 
 //user section
