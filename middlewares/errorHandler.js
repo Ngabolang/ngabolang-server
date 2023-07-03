@@ -5,11 +5,11 @@ module.exports = (error, req, res, next) => {
   switch (error.name) {
     case "EmailIsRequired":
       status = 400;
-      message = "email is required";
+      message = "Email is required";
       break;
     case "PasswordIsRequired":
       status = 400;
-      message = "password is required";
+      message = "Password is required";
       break;
     case "SequelizeValidationError":
       status = 400;

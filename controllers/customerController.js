@@ -97,6 +97,7 @@ class Controller {
         ],
         order: [["createdAt", "DESC"]],
       });
+      if (trips.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(trips);
     } catch (error) {
       next(error);
@@ -115,7 +116,7 @@ class Controller {
         ],
         order: [["createdAt", "DESC"]],
       });
-      if (!trips) throw { name: "dataNotFound" };
+      if (trips.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(trips);
     } catch (error) {
       next(error);
@@ -140,7 +141,7 @@ class Controller {
         ],
         order: [["createdAt", "DESC"]],
       });
-      if (!trips) throw { name: "dataNotFound" };
+      if (trips.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(trips);
     } catch (error) {
       next(error);
