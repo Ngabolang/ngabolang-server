@@ -84,7 +84,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   );
   Trip.beforeCreate((trip, options) => {
-    trip.chatId = trip.name.toLowerCase().split(" ").join("-") + trip.id;
+    trip.chatId = trip.chatId.toLowerCase().split(" ").join("-");
   });
   return Trip;
 };
