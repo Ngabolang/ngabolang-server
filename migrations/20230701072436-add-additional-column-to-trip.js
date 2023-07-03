@@ -18,11 +18,9 @@ module.exports = {
     await queryInterface.addColumn("Trips", "description", {
       type: Sequelize.TEXT,
     });
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     */
+    await queryInterface.addColumn("Trips", "chatId", {
+      type: Sequelize.STRING,
+    });
   },
 
   async down(queryInterface, Sequelize) {
@@ -31,11 +29,6 @@ module.exports = {
     await queryInterface.removeColumn("Trips", "province");
     await queryInterface.removeColumn("Trips", "limit");
     await queryInterface.removeColumn("Trips", "description");
-
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     */
+    await queryInterface.removeColumn("Trips", "chatId");
   },
 };
