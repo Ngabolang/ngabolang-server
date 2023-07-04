@@ -1,4 +1,3 @@
-
 const { Category, Destination, Trip, TripGroup, User } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
@@ -43,6 +42,7 @@ class Controller {
         access_token: signToken({ id: user.id }),
         username: user.username,
         email: user.email,
+        photoProfile: user.photoProfile,
         message: `${user.username} is successfully logged in`,
       });
     } catch (error) {
@@ -62,7 +62,7 @@ class Controller {
 
       const payload = ticket.getPayload();
 
-      const { name, email } = payload;
+      const { name, email, picture } = payload;
       const password = String(Math.random());
       const [user, created] = await User.findOrCreate({
         where: { email },
@@ -71,12 +71,13 @@ class Controller {
           email: email,
           password: password,
           role: "customer",
+          photoProfile: picture,
         },
       });
       res.status(created ? 201 : 200).json({
         access_token: signToken({ id: user.id }),
         user: await User.findByPk(user.id, {
-          attributes: ["id", "username", "email"],
+          attributes: ["id", "username", "email", "photoProfile"],
         }),
       });
     } catch (err) {
@@ -137,6 +138,16 @@ class Controller {
           },
           {
             model: TripGroup,
+            include: [
+              {
+                model: User,
+                attributes: { exclude: "password" },
+              },
+            ],
+          },
+          {
+            model: User,
+            attributes: { exclude: "password" },
           },
         ],
         order: [["createdAt", "DESC"]],
@@ -161,7 +172,7 @@ class Controller {
         ],
         order: [["createdAt", "DESC"]],
       });
-      if (!tripgroups) throw { name: "dataNotFound" };
+      if (tripgroups.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(tripgroups);
     } catch (error) {
       next(error);
@@ -181,7 +192,7 @@ class Controller {
         attributes: { exclude: "password" },
         order: [["createdAt", "DESC"]],
       });
-      if (!user) throw { name: "dataNotFound" };
+      if (user.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(user);
     } catch (error) {
       next(error);
@@ -195,7 +206,7 @@ class Controller {
         tripId: tripId,
         customerId: req.user.id,
       });
-      res.status(200).json(tripgroup);
+      res.status(201).json(tripgroup);
     } catch (error) {
       next(error);
     }
@@ -250,7 +261,23 @@ class Controller {
       const updatedTripgroud = await tripgroup.save();
       res.status(200).json(updatedTripgroud);
     } catch (error) {
-      console.log(error);
+      next(error);
+    }
+  }
+
+  static async getAllTripGroups(req, res, next) {
+    try {
+      const tripgroups = await TripGroup.findAll({
+        include: [
+          {
+            model: User,
+            attributes: { exclude: "password" },
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      res.status(200).json(tripgroups);
+    } catch (error) {
       next(error);
     }
   }

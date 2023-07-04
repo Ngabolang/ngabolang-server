@@ -3,7 +3,6 @@ const { decodeToken } = require("../helpers/jwt");
 
 async function authentication(req, res, next) {
   try {
-    // console.log(req.headers);
     let { access_token } = req.headers;
     if (!access_token) throw { name: "Unauthenticated" };
     let payload = decodeToken(access_token);
