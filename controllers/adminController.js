@@ -1,13 +1,10 @@
-const { User, Trip, Category, Destination } = require("../models");
+const { User, Trip, Category, Destination, TripGroup } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 
 class Controller {
   static async register(req, res, next) {
     try {
-      // console.log("ke hit");
-      // console.log(req.body);
-
       const { username, email, password, photoProfile, phoneNumber, address } =
         req.body;
       const createUser = await User.create({
@@ -25,15 +22,12 @@ class Controller {
         message: `Succesfully registered`,
       });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
 
   static async login(req, res, next) {
     try {
-      // console.log("Ke hit");
-      // console.log(req.body, "<<<");
       const { email, password } = req.body;
       if (!email) throw { name: "EmailIsRequired" };
       if (!password) throw { name: "PasswordIsRequired" };
@@ -50,7 +44,6 @@ class Controller {
         message: `${user.username} is successfully logged in`,
       });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -71,11 +64,14 @@ class Controller {
             model: Destination,
             attributes: { exclude: ["createdAt", "updatedAt"] },
           },
+          {
+            model: TripGroup,
+            attributes: { exclude: ["createdAt", "updatedAt"] },
+          },
         ],
       });
       res.status(200).json(trips);
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -97,11 +93,18 @@ class Controller {
             model: Destination,
             attributes: { exclude: ["createdAt", "updatedAt"] },
           },
+          {
+            model: TripGroup,
+            include: {
+              model: User,
+              attributes: ["username", "email", "photoProfile"],
+            },
+            attributes: { exclude: ["createdAt", "updatedAt"] },
+          },
         ],
       });
       res.status(200).json(trip);
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -111,7 +114,6 @@ class Controller {
       const newTrip = await Trip.createTrips(req.body, req.user.id);
       res.status(201).json({ message: "success add trips" });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -159,7 +161,6 @@ class Controller {
         trip: updateTrip,
       });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -170,7 +171,6 @@ class Controller {
       const deleteTrip = await Trip.destroy({ where: { id } });
       res.status(200).json({ message: `success delete trip with id ${id}` });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -181,7 +181,6 @@ class Controller {
       const categories = await Category.findAll();
       res.status(200).json(categories);
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -194,7 +193,6 @@ class Controller {
       });
       res.status(201).json(newCategory);
     } catch (error) {
-      console.log(error);
       next(error);
       // res.status(500).json({ message: "Internal Server Error" });
     }
@@ -208,7 +206,6 @@ class Controller {
         .status(200)
         .json({ message: `success delete category with id ${id}` });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -228,7 +225,6 @@ class Controller {
       );
       res.status(201).json({ message: `success edit category with id ${id}` });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -236,11 +232,12 @@ class Controller {
   //user section
   static async getLoggedInUser(req, res, next) {
     try {
-      const user = await User.findByPk(req.user.id);
+      const user = await User.findByPk(req.user.id, {
+        attributes: { exclude: ["password", "createdAt", "updatedAt"] },
+      });
       if (!user || user === null) throw { name: "dataNotFound" };
-      res.status(201).json(user);
+      res.status(200).json(user);
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -259,7 +256,6 @@ class Controller {
       );
       res.status(200).json({ message: "Success update trip status" });
     } catch (error) {
-      console.log(error);
       next(error);
     }
   }
@@ -271,7 +267,19 @@ class Controller {
       const destinations = await Destination.findAll({ where: { tripId } });
       res.status(200).json(destinations);
     } catch (error) {
-      console.log(error);
+      next(error);
+    }
+  }
+
+  static async getTripByChatId(req, res, next) {
+    try {
+      const { chatId } = req.params;
+      const tripToFind = await Trip.findOne({
+        where: { chatId },
+        attributes: ["name", "imgUrl"],
+      });
+      res.status(200).json(tripToFind);
+    } catch (error) {
       next(error);
     }
   }

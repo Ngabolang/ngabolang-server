@@ -7,6 +7,7 @@ const { signToken } = require("../helpers/jwt");
 
 // let validToken;
 let access_token;
+// let chatId = "wisata-labuan-bajo-sailing-komodo";
 const newTrip = {
   name: "Trip to Lembang",
   categoryId: 1,
@@ -173,7 +174,6 @@ describe("POST /admin/login", () => {
     expect(response.body).toHaveProperty("email", expect.any(String));
     expect(response.body).toHaveProperty("message", expect.any(String));
     access_token = response.body.access_token;
-    console.log(access_token, "<<");
   });
 
   test("400 Falied login - should return error if email is null", async () => {
@@ -519,6 +519,27 @@ describe("GET Trips /admin/trip", () => {
       "placeId",
       expect.any(String)
     );
+    expect(response.body[0]).toHaveProperty("TripGroups");
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "id",
+      expect.any(Number)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "tripId",
+      expect.any(Number)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "customerId",
+      expect.any(Number)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "review",
+      expect.any(String)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "paymentStatus",
+      expect.any(Boolean)
+    );
   });
   test("401 Failed get all trips - should return error if not authenticated", async () => {
     const response = await request(app)
@@ -539,7 +560,6 @@ describe("GET /admin/trip/:id", () => {
       .get("/admin/trip/1")
       .set("access_token", access_token);
     //   .set(access_token)
-
     //matchers
     expect(response.status).toBe(200);
     expect(response.body).toBeInstanceOf(Object);
@@ -619,6 +639,28 @@ describe("GET /admin/trip/:id", () => {
       "placeId",
       expect.any(String)
     );
+    expect(response.body).toHaveProperty("TripGroups");
+    expect(response.body.TripGroups[0]).toHaveProperty(
+      "id",
+      expect.any(Number)
+    );
+    expect(response.body.TripGroups[0]).toHaveProperty(
+      "tripId",
+      expect.any(Number)
+    );
+    expect(response.body.TripGroups[0]).toHaveProperty(
+      "customerId",
+      expect.any(Number)
+    );
+    expect(response.body.TripGroups[0]).toHaveProperty(
+      "review",
+      expect.any(String)
+    );
+    expect(response.body.TripGroups[0]).toHaveProperty(
+      "paymentStatus",
+      expect.any(Boolean)
+    );
+    chatId = response.body.chatId;
   });
   test("401 Failed get all trips - should return error if not authenticated", async () => {
     const response = await request(app)
@@ -858,7 +900,8 @@ describe("POST new Category /admin/category", () => {
   });
 });
 
-describe("PATCH update status trip /trip/:id", () => {
+// PATCH trip status /admin/trip/:id
+describe("PATCH update status trip /admin/trip/:id", () => {
   test("200 success update trip status - should update trip", async () => {
     const response = await request(app)
       .patch("/admin/trip/2")
@@ -889,6 +932,143 @@ describe("PATCH update status trip /trip/:id", () => {
       .send({ status: false });
 
     //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
+// PUT update category /admin/trip/:id
+describe("PUT update trip category /admin/category/:id", () => {
+  const id = 2;
+  test("201 success update trip category - should update category", async () => {
+    const response = await request(app)
+      .put(`/admin/category/${id}`)
+      .set("access_token", access_token)
+      .send({
+        name: "new category",
+        imgUrl: "photo new category",
+      });
+
+    //matchers
+    expect(response.status).toBe(201);
+    expect(response.body).toHaveProperty(
+      "message",
+      `success edit category with id ${id}`
+    );
+  });
+  test("404 failed to update category - should return error data not found", async () => {
+    const response = await request(app)
+      .put(`/admin/category/50000`)
+      .set("access_token", access_token)
+      .send({
+        name: "new category",
+        imgUrl: "photo new category",
+      });
+
+    //matchers
+    expect(response.status).toBe(404);
+    expect(response.body).toHaveProperty("message", "data not found");
+  });
+  test("401 Failed update trip status - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .put(`/admin/category/${id}`)
+      .set("access_token", null)
+      .send({
+        name: "new category",
+        imgUrl: "photo new category",
+      });
+
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
+// GET user log in /admin/user
+describe("GET logged in user /admin/user", () => {
+  test("200 success get user logged in - should fetch user", async () => {
+    const response = await request(app)
+      .get(`/admin/user`)
+      .set("access_token", access_token);
+
+    //matchers
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty("id", expect.any(Number));
+    expect(response.body).toHaveProperty("username", expect.any(String));
+    expect(response.body).toHaveProperty("email", expect.any(String));
+    expect(response.body).toHaveProperty("role", expect.any(String));
+    expect(response.body).toHaveProperty("photoProfile", expect.any(String));
+    expect(response.body).toHaveProperty("phoneNumber", expect.any(String));
+    expect(response.body).toHaveProperty("address", expect.any(String));
+  });
+  test("401 Failed get logged in user - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get(`/admin/user`)
+      .set("access_token", null);
+
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
+// GET all destination by trip id /admin/destination/:tripId
+describe("GET logged in user /admin/destination/:tripId", () => {
+  const tripId = 2;
+  test("200 success get all destinations by tripId - should fetch destinations", async () => {
+    const response = await request(app)
+      .get(`/admin/destination/${tripId}`)
+      .set("access_token", access_token);
+
+    //matchers
+    expect(response.status).toBe(200);
+    expect(response.body).toBeInstanceOf(Object);
+    expect(response.body[0]).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("tripId", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("name", expect.any(String));
+    expect(response.body[0]).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body[0]).toHaveProperty("labelDay", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("startHour", expect.any(String));
+    expect(response.body[0]).toHaveProperty("longitude", expect.any(String));
+    expect(response.body[0]).toHaveProperty("latitude", expect.any(String));
+    expect(response.body[0]).toHaveProperty("activity", expect.any(String));
+    expect(response.body[0]).toHaveProperty("placeId", expect.any(String));
+    expect(response.body[0]).toHaveProperty("createdAt", expect.any(String));
+    expect(response.body[0]).toHaveProperty("updatedAt", expect.any(String));
+  });
+  test("401 Failed get logged in user - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get(`/admin/destination/${tripId}`)
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
+describe("GET trip by chatId /admin/chat/:chatId", () => {
+  const chatId = "wisata-labuan-bajo-sailing-komodo";
+
+  test("200 success trip by chatId - should fetch user", async () => {
+    const response = await request(app)
+      .get(`/admin/chat/${chatId}`)
+      .set("access_token", access_token);
+
+    //matchers
+    expect(response.status).toBe(200);
+  });
+  test("401 Failed get trip by chatId - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get(`/admin/chat/${chatId}`)
+      .set("access_token", null);
 
     //matchers
     expect(response.status).toBe(401);
