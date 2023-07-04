@@ -213,6 +213,7 @@ class Controller {
       const tripgroup = await TripGroup.create({
         tripId: tripId,
         customerId: req.user.id,
+        paymentStatus: false,
       });
       res.status(201).json(tripgroup);
     } catch (error) {
@@ -240,6 +241,53 @@ class Controller {
       const patchedTripgroup = await tripgroup.save();
 
       res.status(200).json(patchedTripgroup);
+    } catch (error) {
+      next(error);
+    }
+  }
+  static async midtrans(req, res, next) {
+    try {
+      const { tripId } = req.params;
+      const tripgroup = await TripGroup.findOne({
+        where: {
+          customerId: req.user.id,
+          tripId: tripId,
+        },
+        include: [
+          {
+            model: Trip,
+          },
+          {
+            model: User,
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!tripgroup) throw { name: "dataNotFound" };
+      if (tripgroup.paymentStatus === true) throw { name: "Paid" };
+
+      //generate midtrans token
+      let snap = new midtransClient.Snap({
+        // Set to true if you want Production Environment (accept real transaction).
+        isProduction: false,
+        serverKey: process.env.MIDTRANS_SERVER_KEY,
+      });
+
+      let parameter = {
+        transaction_details: {
+          order_id: "TRX6661-" + Math.floor(100000 + Math.random() * 900000),
+          gross_amount: tripgroup.Trip.price,
+        },
+        credit_card: {
+          secure: true,
+        },
+        customer_details: {
+          email: tripgroup.User.email,
+        },
+      };
+
+      let midtransToken = await snap.createTransaction(parameter);
+      res.status(201).json(midtransToken);
     } catch (error) {
       next(error);
     }
