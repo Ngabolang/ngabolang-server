@@ -53,6 +53,12 @@ const newTrip = {
     },
   ],
 };
+
+const newCategory = {
+  name: "new Category",
+  imgUrl:
+    "https://img.freepik.com/premium-photo/bonfire-near-camping-tents-outdoors-night_495423-58159.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
+};
 const user1 = {
   username: "newAdmin",
   email: "newAdmin@email.com",
@@ -421,7 +427,7 @@ describe("POST /admin/register", () => {
 });
 
 // GET /admin/trip
-describe("GET /admin/trip", () => {
+describe("GET Trips /admin/trip", () => {
   test("200 success get trips - should return all trips", async () => {
     const response = await request(app)
       .get("/admin/trip")
@@ -430,7 +436,99 @@ describe("GET /admin/trip", () => {
 
     //matchers
     expect(response.status).toBe(200);
+    expect(response.body).toBeInstanceOf(Object);
     expect(response.body.length).toBeGreaterThan(0);
+    expect(response.body[0]).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("name", expect.any(String));
+    expect(response.body[0]).toHaveProperty("categoryId", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("date", expect.any(String));
+    expect(response.body[0]).toHaveProperty("price", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("status", expect.any(Boolean));
+    expect(response.body[0]).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body[0]).toHaveProperty("videoUrl", expect.any(String));
+    expect(response.body[0]).toHaveProperty("duration", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("meetingPoint", expect.any(String));
+    expect(response.body[0]).toHaveProperty("location", expect.any(String));
+    expect(response.body[0]).toHaveProperty("limit", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("description", expect.any(String));
+    expect(response.body[0]).toHaveProperty("chatId", expect.any(String));
+    expect(response.body[0]).toHaveProperty("createdAt", expect.any(String));
+    expect(response.body[0]).toHaveProperty("updatedAt", expect.any(String));
+
+    expect(response.body[0]).toHaveProperty("Category");
+    expect(response.body[0].Category).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0].Category).toHaveProperty(
+      "name",
+      expect.any(String)
+    );
+    expect(response.body[0].Category).toHaveProperty(
+      "imgUrl",
+      expect.any(String)
+    );
+    expect(response.body[0]).toHaveProperty("User");
+    expect(response.body[0].User).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0].User).toHaveProperty(
+      "username",
+      expect.any(String)
+    );
+    expect(response.body[0].User).toHaveProperty("role", expect.any(String));
+    expect(response.body[0].User).toHaveProperty(
+      "photoProfile",
+      expect.any(String)
+    );
+    expect(response.body[0].User).toHaveProperty(
+      "phoneNumber",
+      expect.any(String)
+    );
+    expect(response.body[0].User).toHaveProperty("address", expect.any(String));
+
+    expect(response.body[0]).toHaveProperty("Destinations");
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "id",
+      expect.any(Number)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "tripId",
+      expect.any(Number)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "imgUrl",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "labelDay",
+      expect.any(Number)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "startHour",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "longitude",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "latitude",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "activity",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "placeId",
+      expect.any(String)
+    );
+  });
+  test("401 Failed get all trips - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get("/admin/trip")
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
   });
 });
 
@@ -445,11 +543,97 @@ describe("GET /admin/trip/:id", () => {
     //matchers
     expect(response.status).toBe(200);
     expect(response.body).toBeInstanceOf(Object);
+    expect(response.body).toHaveProperty("id", expect.any(Number));
+    expect(response.body).toHaveProperty("name", expect.any(String));
+    expect(response.body).toHaveProperty("categoryId", expect.any(Number));
+    expect(response.body).toHaveProperty("adminId", expect.any(Number));
+    expect(response.body).toHaveProperty("date", expect.any(String));
+    expect(response.body).toHaveProperty("price", expect.any(Number));
+    expect(response.body).toHaveProperty("status", expect.any(Boolean));
+    expect(response.body).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body).toHaveProperty("videoUrl", expect.any(String));
+    expect(response.body).toHaveProperty("duration", expect.any(Number));
+    expect(response.body).toHaveProperty("meetingPoint", expect.any(String));
+    expect(response.body).toHaveProperty("location", expect.any(String));
+    expect(response.body).toHaveProperty("limit", expect.any(Number));
+    expect(response.body).toHaveProperty("description", expect.any(String));
+    expect(response.body).toHaveProperty("chatId", expect.any(String));
+    expect(response.body).toHaveProperty("createdAt", expect.any(String));
+    expect(response.body).toHaveProperty("updatedAt", expect.any(String));
+    expect(response.body).toHaveProperty("Category");
+    expect(response.body.Category).toHaveProperty("id", expect.any(Number));
+    expect(response.body.Category).toHaveProperty("name", expect.any(String));
+    expect(response.body.Category).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body).toHaveProperty("User");
+    expect(response.body.User).toHaveProperty("id", expect.any(Number));
+    expect(response.body.User).toHaveProperty("username", expect.any(String));
+    expect(response.body.User).toHaveProperty("email", expect.any(String));
+    expect(response.body.User).toHaveProperty("role", expect.any(String));
+    expect(response.body.User).toHaveProperty(
+      "photoProfile",
+      expect.any(String)
+    );
+    expect(response.body.User).toHaveProperty(
+      "phoneNumber",
+      expect.any(String)
+    );
+    expect(response.body.User).toHaveProperty("address", expect.any(String));
+    expect(response.body).toHaveProperty("Destinations");
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "id",
+      expect.any(Number)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "tripId",
+      expect.any(Number)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "name",
+      expect.any(String)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "imgUrl",
+      expect.any(String)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "labelDay",
+      expect.any(Number)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "startHour",
+      expect.any(String)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "longitude",
+      expect.any(String)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "latitude",
+      expect.any(String)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "activity",
+      expect.any(String)
+    );
+    expect(response.body.Destinations[0]).toHaveProperty(
+      "placeId",
+      expect.any(String)
+    );
+  });
+  test("401 Failed get all trips - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get("/admin/trip/1")
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
   });
 });
 
 // POST /admin/trip
-describe("POST /admin/trip/:id", () => {
+describe("POST new Trip /admin/trip", () => {
   test("201 success post trip - should create new trip", async () => {
     const response = await request(app)
       .post("/admin/trip")
@@ -461,6 +645,17 @@ describe("POST /admin/trip/:id", () => {
     expect(response.status).toBe(201);
     expect(response.body).toBeInstanceOf(Object);
     expect(response.body).toHaveProperty("message", "success add trips");
+  });
+  test("401 Failed get all trips - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .post("/admin/trip")
+      .set("access_token", null)
+      .send(newTrip);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
   });
 });
 
@@ -495,6 +690,54 @@ describe("PUT /admin/trip/:id", () => {
       `success edit trips with id ${id}`
     );
   });
+  test("404 failed to edit trip - should return error if data not found", async () => {
+    const response = await request(app)
+      .put(`/admin/trip/50000`)
+      .set("access_token", access_token)
+      .send({
+        name: "Trip to Lembang",
+        categoryId: 1,
+        date: "2023-08-17",
+        price: 3500000,
+        imgUrl:
+          "https://res.klook.com/image/upload/Mobile/City/rv76yqukp2hey0fckh99.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=kQIri35Yjds",
+        duration: 3,
+        meetingPoint: "Jakarta",
+        location: "Bandung",
+        limit: 3,
+        description: "Trip seru banget di lembang guys",
+      });
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(404);
+    expect(response.body).toHaveProperty("message", `data not found`);
+  });
+  test("401 Failed edit trip - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .put(`/admin/trip/${id}`)
+      .set("access_token", null)
+      .send({
+        name: "Trip to Lembang",
+        categoryId: 1,
+        date: "2023-08-17",
+        price: 3500000,
+        imgUrl:
+          "https://res.klook.com/image/upload/Mobile/City/rv76yqukp2hey0fckh99.jpg",
+        videoUrl: "https://www.youtube.com/watch?v=kQIri35Yjds",
+        duration: 3,
+        meetingPoint: "Jakarta",
+        location: "Bandung",
+        limit: 3,
+        description: "Trip seru banget di lembang guys",
+      });
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
 });
 
 // DELETE /admin/trip/:id
@@ -513,6 +756,16 @@ describe("DELETE /admin/trip/:id", () => {
       "message",
       `success delete trip with id ${id}`
     );
+  });
+  test("401 Failed delete trip - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .delete(`/admin/trip/${id}`)
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
   });
 });
 
@@ -533,11 +786,21 @@ describe("DELETE /admin/category/:id", () => {
       `success delete category with id ${id}`
     );
   });
+  test("401 Failed delete category - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .delete(`/admin/category/${id}`)
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
 });
 
 // GET /admin/category
-describe("GET /admin/category", () => {
-  test("200 success get trips - should return all trips", async () => {
+describe("GET all categories /admin/category", () => {
+  test("200 success get trips - should return all categories", async () => {
     const response = await request(app)
       .get("/admin/category")
       .set("access_token", access_token);
@@ -545,6 +808,90 @@ describe("GET /admin/category", () => {
 
     //matchers
     expect(response.status).toBe(200);
-    expect(response.body.length).toBeGreaterThan(0);
+    expect(response.body).toBeInstanceOf(Object);
+    expect(response.body[0]).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("name", expect.any(String));
+    expect(response.body[0]).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body[0]).toHaveProperty("createdAt", expect.any(String));
+    expect(response.body[0]).toHaveProperty("updatedAt", expect.any(String));
+  });
+
+  test("401 Failed get all category - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get("/admin/category")
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
+// POST /admin/category
+describe("POST new Category /admin/category", () => {
+  test("201 success post trip - should create new trip", async () => {
+    const response = await request(app)
+      .post("/admin/category")
+      .set("access_token", access_token)
+      .send(newTrip);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(201);
+    expect(response.body).toHaveProperty("id", expect.any(Number));
+    expect(response.body).toHaveProperty("name", expect.any(String));
+    expect(response.body).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body).toHaveProperty("updatedAt", expect.any(String));
+    expect(response.body).toHaveProperty("createdAt", expect.any(String));
+  });
+  test("401 Failed create new category - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .post("/admin/category")
+      .set("access_token", null)
+      .send(newTrip);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
+describe("PATCH update status trip /trip/:id", () => {
+  test("200 success update trip status - should update trip", async () => {
+    const response = await request(app)
+      .patch("/admin/trip/2")
+      .set("access_token", access_token)
+      .send({ status: false });
+
+    //matchers
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty(
+      "message",
+      "Success update trip status"
+    );
+  });
+  test("404 failed to update trip status - should return error data not found", async () => {
+    const response = await request(app)
+      .patch("/admin/trip/5000")
+      .set("access_token", access_token)
+      .send({ status: false });
+
+    //matchers
+    expect(response.status).toBe(404);
+    expect(response.body).toHaveProperty("message", "data not found");
+  });
+  test("401 Failed update trip status - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .patch("/admin/trip/:id")
+      .set("access_token", null)
+      .send({ status: false });
+
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
   });
 });
