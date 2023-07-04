@@ -553,6 +553,133 @@ describe("GET Trips /admin/trip", () => {
   });
 });
 
+// GET /admin/trip/close
+describe("GET Trips /admin/trip/close", () => {
+  test("200 success get trips - should return all trips", async () => {
+    const response = await request(app)
+      .get("/admin/trip/close")
+      .set("access_token", access_token);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(200);
+    expect(response.body).toBeInstanceOf(Object);
+    expect(response.body.length).toBeGreaterThan(0);
+    expect(response.body[0]).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("name", expect.any(String));
+    expect(response.body[0]).toHaveProperty("categoryId", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("date", expect.any(String));
+    expect(response.body[0]).toHaveProperty("price", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("status", expect.any(Boolean));
+    expect(response.body[0]).toHaveProperty("imgUrl", expect.any(String));
+    expect(response.body[0]).toHaveProperty("videoUrl", expect.any(String));
+    expect(response.body[0]).toHaveProperty("duration", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("meetingPoint", expect.any(String));
+    expect(response.body[0]).toHaveProperty("location", expect.any(String));
+    expect(response.body[0]).toHaveProperty("limit", expect.any(Number));
+    expect(response.body[0]).toHaveProperty("description", expect.any(String));
+    expect(response.body[0]).toHaveProperty("chatId", expect.any(String));
+    expect(response.body[0]).toHaveProperty("createdAt", expect.any(String));
+    expect(response.body[0]).toHaveProperty("updatedAt", expect.any(String));
+
+    expect(response.body[0]).toHaveProperty("Category");
+    expect(response.body[0].Category).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0].Category).toHaveProperty(
+      "name",
+      expect.any(String)
+    );
+    expect(response.body[0].Category).toHaveProperty(
+      "imgUrl",
+      expect.any(String)
+    );
+    expect(response.body[0]).toHaveProperty("User");
+    expect(response.body[0].User).toHaveProperty("id", expect.any(Number));
+    expect(response.body[0].User).toHaveProperty(
+      "username",
+      expect.any(String)
+    );
+    expect(response.body[0].User).toHaveProperty("role", expect.any(String));
+    expect(response.body[0].User).toHaveProperty(
+      "photoProfile",
+      expect.any(String)
+    );
+    expect(response.body[0].User).toHaveProperty(
+      "phoneNumber",
+      expect.any(String)
+    );
+    expect(response.body[0].User).toHaveProperty("address", expect.any(String));
+
+    expect(response.body[0]).toHaveProperty("Destinations");
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "id",
+      expect.any(Number)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "tripId",
+      expect.any(Number)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "imgUrl",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "labelDay",
+      expect.any(Number)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "startHour",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "longitude",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "latitude",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "activity",
+      expect.any(String)
+    );
+    expect(response.body[0].Destinations[0]).toHaveProperty(
+      "placeId",
+      expect.any(String)
+    );
+    expect(response.body[0]).toHaveProperty("TripGroups");
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "id",
+      expect.any(Number)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "tripId",
+      expect.any(Number)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "customerId",
+      expect.any(Number)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "review",
+      expect.any(String)
+    );
+    expect(response.body[0].TripGroups[0]).toHaveProperty(
+      "paymentStatus",
+      expect.any(Boolean)
+    );
+  });
+  test("401 Failed get all trips - should return error if not authenticated", async () => {
+    const response = await request(app)
+      .get("/admin/trip/close")
+      .set("access_token", null);
+    //   .set(access_token)
+
+    //matchers
+    expect(response.status).toBe(401);
+    expect(response.body).toHaveProperty("message", "unauthenticated");
+  });
+});
+
 // GET /admin/trip/:id
 describe("GET /admin/trip/:id", () => {
   test("200 success get trips - should return all trips", async () => {
