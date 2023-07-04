@@ -170,6 +170,12 @@ class Controller {
         include: [
           {
             model: Trip,
+            include: [
+              {
+                model: User,
+                attributes: { exclude: "password" },
+              },
+            ],
           },
         ],
         order: [["createdAt", "DESC"]],
@@ -279,6 +285,17 @@ class Controller {
         order: [["createdAt", "DESC"]],
       });
       res.status(200).json(tripgroups);
+    } catch (error) {
+      next(error);
+    }
+  }
+
+  static async getAllCategories(req, res, next) {
+    try {
+      const categories = await Category.findAll({
+        order: [["createdAt", "DESC"]],
+      });
+      res.status(200).json(categories);
     } catch (error) {
       next(error);
     }

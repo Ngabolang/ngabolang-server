@@ -15,5 +15,6 @@ router.post("/buy-trip/:tripId", authentication, Controller.createTripGroup);
 router.patch("/payment/:tripId", authentication, Controller.payment);
 router.put("/review/:tripId", authentication, authorization, Controller.review);
 router.get("/review", Controller.getAllTripGroups);
+router.get("/category", Controller.getAllCategories);
 
 module.exports = router;
