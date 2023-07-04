@@ -3,7 +3,7 @@ const app = require("../app");
 const { sequelize } = require("../models");
 const { signToken } = require("../helpers/jwt");
 const { hashPassword, comparePassword } = require("../helpers/bcrypt");
-const { TripGroup } = require("../models");
+const { Category, Destination, Trip, TripGroup, User } = require("../models");
 let access_token;
 
 beforeAll(async () => {
@@ -514,6 +514,20 @@ describe("POST buy trip create tripgroup /customer/buy-trip/:tripId", () => {
     expect(response.body).toHaveProperty("rating", null);
     expect(response.body).toHaveProperty("paymentStatus", null);
   });
+
+  test("Handles internal server error during trip group creation", async () => {
+    // Mock the trip group creation to throw an error
+    jest
+      .spyOn(TripGroup, "create")
+      .mockRejectedValue(new Error("Internal server error"));
+
+    const response = await request(app)
+      .post("/customer/buy-trip/1")
+      .set({ access_token });
+
+    expect(response.status).toBe(500);
+    expect(response.body).toEqual({ message: "internal server error" });
+  });
 });
 
 describe("PATCH /customer/payment/:tripId", () => {
@@ -676,5 +690,44 @@ describe("GET all reviews customer/review", () => {
       expect(review.User).toHaveProperty("createdAt", expect.any(String));
       expect(review.User).toHaveProperty("updatedAt", expect.any(String));
     });
+  });
+
+  test("Handles error when fetching tripgroups", async () => {
+    // Mock the TripGroup.findAll method to throw an error
+    jest
+      .spyOn(TripGroup, "findAll")
+      .mockRejectedValue(new Error("Internal server error"));
+
+    const response = await request(app).get("/customer/review");
+
+    expect(response.status).toBe(500);
+    expect(response.body).toEqual({ message: "internal server error" });
+  });
+});
+
+describe("GET all categories customer/category", () => {
+  test("Successfully fetch category", async () => {
+    const response = await request(app).get("/customer/category");
+    expect(response.status).toBe(200);
+    expect(response.body).toBeInstanceOf(Array);
+    response.body.forEach((category) => {
+      expect(category).toHaveProperty("id", expect.any(Number));
+      expect(category).toHaveProperty("name", expect.any(String));
+      expect(category).toHaveProperty("imgUrl", expect.any(String));
+      expect(category).toHaveProperty("createdAt", expect.any(String));
+      expect(category).toHaveProperty("updatedAt", expect.any(String));
+    });
+  });
+
+  test("Handles error when fetching categories", async () => {
+    // Mock the Category.findAll method to throw an error
+    jest
+      .spyOn(Category, "findAll")
+      .mockRejectedValue(new Error("Internal server error"));
+
+    const response = await request(app).get("/customer/category");
+
+    expect(response.status).toBe(500);
+    expect(response.body).toEqual({ message: "internal server error" });
   });
 });
