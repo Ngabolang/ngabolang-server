@@ -13,7 +13,7 @@ router.get("/my-trip", authentication, Controller.getMyTrip);
 router.get("/user/:tripId", Controller.getUserBytripId);
 router.post("/buy-trip/:tripId", authentication, Controller.createTripGroup);
 router.patch("/payment/:tripId", authentication, Controller.payment);
-router.patch("/midtrans/:tripId", authentication, Controller.midtrans);
+router.post("/midtrans/:tripId", authentication, Controller.midtrans);
 router.put("/review/:tripId", authentication, authorization, Controller.review);
 router.get("/review", Controller.getAllTripGroups);
 router.get("/category", Controller.getAllCategories);
