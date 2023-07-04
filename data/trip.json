@@ -23,7 +23,7 @@
     "adminId": 4,
     "date": "2023-09-17",
     "price": 500000,
-    "status": true,
+    "status": false,
     "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
     "videoUrl": "https://www.youtube.com/watch?v=kQIri35Yjds",
     "duration": 2,
