@@ -3,6 +3,7 @@ const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { OAuth2Client } = require("google-auth-library");
 const { error } = require("console");
+const midtransClient = require("midtrans-client")
 
 class Controller {
   static async register(req, res, next) {
@@ -44,6 +45,7 @@ class Controller {
         username: user.username,
         email: user.email,
         photoProfile: user.photoProfile,
+        id:user.id,
         message: `${user.username} is successfully logged in`,
       });
     } catch (error) {
@@ -265,7 +267,7 @@ class Controller {
       });
       if (!tripgroup) throw { name: "dataNotFound" };
       if (tripgroup.paymentStatus === true) throw { name: "Paid" };
-
+   
       //generate midtrans token
       let snap = new midtransClient.Snap({
         // Set to true if you want Production Environment (accept real transaction).
@@ -295,12 +297,12 @@ class Controller {
 
   static async review(req, res, next) {
     try {
-      const { tripId } = req.params;
+      const { id } = req.params;
       const { review, rating } = req.body;
       const tripgroup = await TripGroup.findOne({
         where: {
           customerId: req.user.id,
-          tripId: tripId,
+          id: id,
         },
         include: [
           {

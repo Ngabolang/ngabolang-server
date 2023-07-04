@@ -14,7 +14,7 @@ router.get("/user/:tripId", Controller.getUserBytripId);
 router.post("/buy-trip/:tripId", authentication, Controller.createTripGroup);
 router.patch("/payment/:tripId", authentication, Controller.payment);
 router.post("/midtrans/:tripId", authentication, Controller.midtrans);
-router.put("/review/:tripId", authentication, authorization, Controller.review);
+router.put("/review/:id", authentication, Controller.review);
 router.get("/review", Controller.getAllTripGroups);
 router.get("/category", Controller.getAllCategories);
 
