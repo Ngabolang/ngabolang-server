@@ -76,6 +76,35 @@ class Controller {
     }
   }
 
+  static async getCloseTrip(req, res, next) {
+    try {
+      const trips = await Trip.findAll({
+        where: { status: false },
+        include: [
+          {
+            model: Category,
+            attributes: { exclude: ["createdAt", "updatedAt"] },
+          },
+          {
+            model: User,
+            attributes: { exclude: ["password", "createdAt", "updatedAt"] },
+          },
+          {
+            model: Destination,
+            attributes: { exclude: ["createdAt", "updatedAt"] },
+          },
+          {
+            model: TripGroup,
+            attributes: { exclude: ["createdAt", "updatedAt"] },
+          },
+        ],
+      });
+      res.status(200).json(trips);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async getTripById(req, res, next) {
     try {
       const { id } = req.params;
