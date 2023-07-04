@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             adminId: adminId,
             date: body.date,
             price: body.price,
-            status: false,
+            status: true,
             imgUrl: body.imgUrl,
             videoUrl: body.videoUrl,
             duration: body.duration,
@@ -85,6 +85,14 @@ module.exports = (sequelize, DataTypes) => {
   );
   Trip.beforeCreate((trip, options) => {
     trip.chatId = trip.chatId.toLowerCase().split(" ").join("-");
+    trip.videoUrl = trip.videoUrl.replace(
+      "https://youtu.be/",
+      "https://www.youtube.com/embed/"
+    );
+    trip.videoUrl = trip.videoUrl.replace(
+      "https://www.youtube.com/watch?v=",
+      "https://www.youtube.com/embed/"
+    );
   });
   return Trip;
 };
