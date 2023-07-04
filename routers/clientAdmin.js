@@ -17,6 +17,7 @@ router.get(
   authentication,
   Controller.getDestinationByTripId
 );
+router.get("/chat/:chatId", authentication, Controller.getTripByChatId);
 
 // CATEGORY section
 router.get("/category", authentication, Controller.getCategory);
