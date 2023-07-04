@@ -5,6 +5,9 @@ const { signToken } = require("../helpers/jwt");
 class Controller {
   static async register(req, res, next) {
     try {
+      // console.log("ke hit");
+      // console.log(req.body);
+
       const { username, email, password, photoProfile, phoneNumber, address } =
         req.body;
       const createUser = await User.create({
@@ -22,14 +25,15 @@ class Controller {
         message: `Succesfully registered`,
       });
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
 
   static async login(req, res, next) {
     try {
-      console.log("Ke hit");
-      console.log(req.body, "<<<");
+      // console.log("Ke hit");
+      // console.log(req.body, "<<<");
       const { email, password } = req.body;
       if (!email) throw { name: "EmailIsRequired" };
       if (!password) throw { name: "PasswordIsRequired" };
@@ -202,7 +206,7 @@ class Controller {
       const deleteCategory = await Category.destroy({ where: { id } });
       res
         .status(200)
-        .json({ message: `succes delete category with id ${id} ` });
+        .json({ message: `success delete category with id ${id}` });
     } catch (error) {
       console.log(error);
       next(error);
@@ -236,6 +240,7 @@ class Controller {
       if (!user || user === null) throw { name: "dataNotFound" };
       res.status(201).json(user);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }

@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "postgres",
-    "password": "postgres",
+    "password": "Subandungg920",
     "database": "ngabolang_db_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
