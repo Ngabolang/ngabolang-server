@@ -51,6 +51,7 @@ class Controller {
   static async getTrip(req, res, next) {
     try {
       const trips = await Trip.findAll({
+        where: { status: true },
         include: [
           {
             model: Category,
