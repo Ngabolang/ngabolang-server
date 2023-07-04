@@ -109,7 +109,7 @@ class Controller {
   static async createTrip(req, res, next) {
     try {
       const newTrip = await Trip.createTrips(req.body, req.user.id);
-      res.status(201).json({ message: "success add trips", trip: newTrip });
+      res.status(201).json({ message: "success add trips" });
     } catch (error) {
       console.log(error);
       next(error);
