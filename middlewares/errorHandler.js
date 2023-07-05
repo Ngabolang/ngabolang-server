@@ -24,13 +24,9 @@ module.exports = (error, req, res, next) => {
       status = 401;
       message = "unauthenticated";
       break;
-    case "forbidden":
-      status = 403;
-      message = "you are not authorized";
-      break;
     case "buy":
       status = 403;
-      message = "you are already buy this tri[";
+      message = "you are already buy this trip";
       break;
     case "dataNotFound":
       status = 404;
