@@ -346,7 +346,16 @@ class Controller {
         ],
         order: [["createdAt", "DESC"]],
       });
-      res.status(200).json(tripgroups);
+
+      const tripGroupsWithReview = tripgroups.filter(
+        (tripgroup) => tripgroup.review.length !== 0
+      );
+
+      if (tripGroupsWithReview.length === 0) {
+        return res.status(200).json({ message: "No data available." });
+      }
+
+      res.status(200).json(tripGroupsWithReview);
     } catch (error) {
       next(error);
     }
