@@ -5,10 +5,69 @@
     "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipPaE5Bmj1nDSYGuDWEZRrhUx9NFEnQ1AOL-Chrs=w408-h306-k-no",
     "labelDay": 1,
     "startHour": "09:00",
-    "latitude": "-8.54673581674982",
-    "longitude": "119.81622416875352",
-    "activity": "makan",
-    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+    "latitude": "-8.662487",
+    "longitude": "116.337841",
+    "activity": "Snorkeling"
+  },
+  {
+    "tripId": 1,
+    "name": "Pulau Manjarite",
+    "imgUrl": "https://lh5.googleusercontent.com/p/AF1QipOf7kK1X9_RJnpVkj77m4oQuGpbQPqkHriD8syq=w426-h240-k-no",
+    "labelDay": 1,
+    "startHour": "14:00",
+    "latitude": "-8.661745",
+    "longitude": "116.384133",
+    "activity": "Snorkeling"
+  },
+  {
+    "tripId": 1,
+    "name": "Pulau Kalong",
+    "imgUrl": "https://asset.kompas.com/crops/EIIeOwuamrzRPRlozoGefPiYQa8=/0x0:0x0/750x500/data/photo/2021/08/09/6110f2cb657fe.jpg",
+    "labelDay": 1,
+    "startHour": "17:00",
+    "latitude": "-8.662100",
+    "longitude": "116.451409",
+    "activity": "Melihat kelelawar"
+  },
+  {
+    "tripId": 1,
+    "name": "Pink Beach",
+    "imgUrl": "hhttps://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvTPTfkmF0fTbh0d1bjf5KY1lJ-o__27oBbA&usqp=CAU",
+    "labelDay": 1,
+    "startHour": "08:30",
+    "latitude": "-8.687789",
+    "longitude": "119.531558",
+    "activity": "Foto-foto, video dengan drone, dan bersantai"
+  },
+  {
+    "tripId": 1,
+    "name": "Pulau Komodo",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR4QdaHJGo0t2gXCImv7iT3Cain9OO2MloQ&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "11:30",
+    "latitude": "-8.582159",
+    "longitude": "119.493782",
+    "activity": "Explore Pulau dan bertemu satwa Komodo"
+  },
+  {
+    "tripId": 1,
+    "name": "Taka Makassar",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIolLRkKAHlxgYOaCxDdeXt1LsmAB-VzQIuQ&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "14:00",
+    "latitude": "-8.631470",
+    "longitude": "119.367358",
+    "activity": "Snorkeling, video-foto, dan explore"
+  },
+  {
+    "tripId": 1,
+    "name": "Pulau Kanawa",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB98aMZhI_iiIt9AjSrV10hsiLQDbqmzQCRA&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "18:00",
+    "latitude": "-8.569172",
+    "longitude": "119.484242",
+    "activity": "Bermalam di Pulau Kanawa"
   },
   {
     "tripId": 1,
@@ -34,35 +93,180 @@
   },
   {
     "tripId": 2,
-    "name": "Pos 1",
+    "name": "Tempat Wisata Alama Gunung Papandayan",
     "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
     "labelDay": 1,
-    "startHour": "04:00",
-    "latitude": "-8.612804617327182",
-    "longitude": "119.48735557672023",
-    "activity": "makan",
+    "startHour": "21:00",
+    "longitude": "107.7321376",
+    "latitude": "-7.3096099",
+    "activity": "Tiba di lokasi dan menginap",
     "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
   },
   {
     "tripId": 2,
-    "name": "Pos 2",
-    "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
-    "labelDay": 1,
-    "startHour": "06:00",
-    "latitude": "-8.612804617327182",
-    "longitude": "119.48735557672023",
-    "activity": "makan",
-    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
-  },
-  {
-    "tripId": 2,
-    "name": "Pos Pulang",
-    "imgUrl": "https://img.freepik.com/free-vector/gradient-mountain-landscape_52683-77407.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph",
+    "name": "Ghober Hoet",
+    "imgUrl": "https://cdn.idntimes.com/content-images/post/20210810/instagram-davidrinaldig-182881021-512020886834139-3993728333802183904-n-01-026e0e16e018ff1681ac73cf5fb2cefd.jpeg",
     "labelDay": 2,
-    "startHour": "06:00",
-    "latitude": "-8.612804617327182",
-    "longitude": "119.48735557672023",
-    "activity": "makan",
+    "startHour": "09:00",
+    "longitude": "107.721169",
+    "latitude": "-7.3110092",
+    "activity": "Memulai pendakian menuju lokasi pembuatan tenda",
     "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 2,
+    "name": "Pondok Saladah",
+    "imgUrl": "https://1.bp.blogspot.com/-MwJ-_I7hPr0/VcouecDlOJI/AAAAAAAAD2c/YhkXWEGP-xQ/s640/Perbukitan%2BMengelilingi%2BPondok%2BSaladah.jpg",
+    "labelDay": 2,
+    "startHour": "13:00",
+    "latitude": "-7.315489",
+    "longitude": "107.7045168",
+    "activity": "Membangun tenda, acara bebas",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 2,
+    "name": "Hutan Mati",
+    "imgUrl": "https://infogarut.id/upload/postingan/1664348173_Hutan%20Mati%20Papandayan.jpg",
+    "labelDay": 3,
+    "startHour": "09:00",
+    "latitude": "-7.3191898",
+    "longitude": "107.7232276",
+    "activity": "Wisata hutan mati, acara bebas",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 3,
+    "name": "Desa Lonthoir",
+    "imgUrl": "https://cdn1-production-images-kly.akamaized.net/qoQC2fqJbZxQ2uwjyYkOj4nhkNY=/1200x900/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/913037/original/088104500_1435563764-4.jpg",
+    "labelDay": 1,
+    "startHour": "11:00",
+    "latitude": "-4.5404248",
+    "longitude": "129.8311297",
+    "activity": "Explore Desa Lonthoir",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 3,
+    "name": "Pulau Karaka",
+    "imgUrl": "https://64.media.tumblr.com/646ab9cb67466c0f205f7b17c59de3bd/tumblr_opq172tvWU1uqpn49o1_1280.jpg",
+    "labelDay": 1,
+    "startHour": "14:00",
+    "latitude": "-4.5032008",
+    "longitude": "129.8871846",
+    "activity": "Snorkling di Pulau Karaka",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 3,
+    "name": "Pulau Nailaka",
+    "imgUrl": "https://www.pegipegi.com/travel/wp-content/uploads/2022/03/nailaka1.jpg",
+    "labelDay": 2,
+    "startHour": "09:00",
+    "latitude": "-4.5355555",
+    "longitude": "129.6866232",
+    "activity": "Island Hoping pulai Ai, Rhun dan Nailaka",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 3,
+    "name": "Pulau Ai",
+    "imgUrl": "https://cdn.idntimes.com/content-images/community/2023/06/20230619-224102-329ae2b286ff7799fbbec7d4597d307a-d4bf0841d9f231837bd48074a354410c.jpg",
+    "labelDay": 2,
+    "startHour": "12:00",
+    "latitude": "-4.527277",
+    "longitude": "129.7543167",
+    "activity": "Island Hoping pulai Ai, Rhun dan Nailaka",
+    "placeId": "ChIJ13oeH8dgtC0Rp2THGQWY6Ck"
+  },
+  {
+    "tripId": 4,
+    "name": "Pantai Pasir Berbisik",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiAmRKEpNXfAeDrqyfz5gsL_3wNpSSPLamlQ&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "10:00",
+    "latitude": "-7.931632",
+    "longitude": "112.949590",
+    "activity": "Beristirahat di pantai"
+  },
+  {
+    "tripId": 4,
+    "name": "Bukit Teletubbies",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjPUU8apLCzznYzha0sEm41pDp7c7yOsXf9Q&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "14:00",
+    "latitude": "-7.927878",
+    "longitude": "112.951463",
+    "activity": "Menikmati pemandangan"
+  },
+  {
+    "tripId": 5,
+    "name": "Pulau Derawan",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGZXUMYJ_Duo9LoUMhi7wKU7hc1VptHOlRGw&usqp=CAU",
+    "labelDay": 1,
+    "startHour": "09:00",
+    "latitude": "2.286166832574883",
+    "longitude": "118.24708067441941",
+    "activity": "Snorkeling dan diving"
+  },
+  {
+    "tripId": 5,
+    "name": "Gusung Sanggalau",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEC6RIxua2buOAjiRCAq5Ul48yyh8muH0u_Q&usqp=CAU",
+    "labelDay": 1,
+    "startHour": "14:00",
+    "latitude": "2.2528",
+    "longitude": "118.4426",
+    "activity": "Berjemur dan berenang"
+  },
+  {
+    "tripId": 5,
+    "name": "Pulau Sangalaki",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMecqsgWjKYUMisCp1RLXTAnbza9DTksRcQQ&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "09:00",
+    "latitude": "2.087248959052964",
+    "longitude": "118.4020754365236",
+    "activity": "Melihat penyu dan diving"
+  },
+  {
+    "tripId": 5,
+    "name": "Manta Point",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReNPF1ST1fFxjuAnDSGMVeAZcKAJA5vlTBpw&usqp=CAU",
+    "labelDay": 2,
+    "startHour": "14:00",
+    "latitude": "2.24115566067936",
+    "longitude": "118.6009938660076",
+    "activity": "Melihat ikan pari manta"
+  },
+  {
+    "tripId": 5,
+    "name": "Pulau Kakaban",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYtQl41DrcegV34eq7onfV94e-YZZ9Wim8Lg&usqp=CAU",
+    "labelDay": 3,
+    "startHour": "09:00",
+    "latitude": "2.138850547752686",
+    "longitude": "118.51055588085384",
+    "activity": "Snorkeling dan menjelajahi danau ubur-ubur"
+  },
+  {
+    "tripId": 5,
+    "name": "Danau Kakaban",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDjhTqXa23r8UVOxr32uLc6lYWnXzJG-XupA&usqp=CAU",
+    "labelDay": 3,
+    "startHour": "14:00",
+    "latitude": "2.1503445649052813",
+    "longitude": "118.52710138119332",
+    "activity": "Snorkeling dan diving di danau air asin"
+  },
+  {
+    "tripId": 5,
+    "name": "Palung Kakaban",
+    "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOzmiNpJXJhugVUlW0WvgXTWEbi50EystKXg&usqp=CAU",
+    "labelDay": 4,
+    "startHour": "09:30",
+    "latitude": "2.1391863353883025",
+    "longitude": "118.50677798630838",
+    "activity": "Diving"
   }
 ]

@@ -1,30 +1,212 @@
 [
   {
     "tripId": 1,
-    "customerId": 1,
+    "customerId": 5,
     "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 2,
+    "customerId": 6,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 2,
+    "customerId": 5,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 2,
+    "customerId": 8,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 2,
+    "customerId": 9,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 2,
+    "customerId": 10,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 3,
+    "customerId": 11,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 3,
+    "customerId": 12,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 3,
+    "customerId": 5,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 3,
+    "customerId": 14,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 3,
+    "customerId": 15,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 6,
+    "customerId": 16,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 6,
+    "customerId": 5,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 6,
+    "customerId": 18,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 6,
+    "customerId": 19,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 6,
+    "customerId": 20,
+    "review": "",
+    "rating": null,
+    "paymentStatus": false
+  },
+  {
+    "tripId": 4,
+    "customerId": 5,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 4,
+    "customerId": 22,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 4,
+    "customerId": 23,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 4,
+    "customerId": 24,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 4,
+    "customerId": 25,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 5,
+    "customerId": 5,
+    "review": "mantap trip ini sangat berkesan",
     "rating": 5,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 5,
+    "customerId": 27,
+    "review": "Belitung indah banget",
+    "rating": 5,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 5,
+    "customerId": 28,
+    "review": "Experience Ngabolang Seru ",
+    "rating": 5,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 5,
+    "customerId": 29,
+    "review": "Nice",
+    "rating": 4,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 5,
+    "customerId": 30,
+    "review": "Teman trip nya seruu thankyou Ngabolang",
+    "rating": 5,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 5,
+    "customerId": 31,
+    "review": "Seruu jandi pengen lagi",
+    "rating": 4,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 1,
+    "customerId": 32,
+    "review": "",
+    "rating": null,
+    "paymentStatus": true
+  },
+  {
+    "tripId": 1,
+    "customerId": 33,
+    "review": "",
+    "rating": null,
     "paymentStatus": false
   },
   {
     "tripId": 1,
-    "customerId": 2,
+    "customerId": 34,
     "review": "",
-    "rating": 5,
-    "paymentStatus": false
-  },
-  {
-    "tripId": 2,
-    "customerId": 1,
-    "review": "",
-    "rating": 5,
-    "paymentStatus": false
-  },
-  {
-    "tripId": 2,
-    "customerId": 2,
-    "review": "",
-    "rating": 5,
+    "rating": null,
     "paymentStatus": false
   }
 ]

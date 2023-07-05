@@ -1,5 +1,320 @@
 [
   {
+    "username": "blestro",
+    "email": "blestro@mail.com",
+    "password": "blestro123",
+    "role": "admin",
+    "photoProfile": "https://i.imgur.com/qJ1e7Nk.jpg",
+    "phoneNumber": "081234567891",
+    "address": "123 Blestro Street"
+  },
+  {
+    "username": "jati",
+    "email": "jati@mail.com",
+    "password": "jati123",
+    "role": "admin",
+    "photoProfile": "https://i.imgur.com/80ufOyU.jpeg",
+    "phoneNumber": "081234567891",
+    "address": "123 Jati Street"
+  },
+  {
+    "username": "syamsul",
+    "email": "syamsul@mail.com",
+    "password": "syamsul123",
+    "role": "admin",
+    "photoProfile": "https://i.imgur.com/qf5rntS.jpeg",
+    "phoneNumber": "081234567891",
+    "address": "123 Syamsul Street"
+  },
+  {
+    "username": "wira",
+    "email": "wira@mail.com",
+    "password": "wira123",
+    "role": "admin",
+    "photoProfile": "https://i.imgur.com/bnavNFF.jpg",
+    "phoneNumber": "081234567891",
+    "address": "123 Wira Street"
+  },
+  {
+    "username": "jisoo",
+    "email": "jisoo@example.com",
+    "password": "jisoo123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/86/c5/94/86c59456342a0347acae017037c18ce0.jpg",
+    "phoneNumber": "081234567891",
+    "address": "123 Jisoo Street"
+  },
+  {
+    "username": "rose",
+    "email": "rose@example.com",
+    "password": "rose123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/3a/c6/ea/3ac6eacb48d8db824a7a087cc2c13c8f.jpg",
+    "phoneNumber": "081234567892",
+    "address": "123 Rose Street"
+  },
+  {
+    "username": "jennie",
+    "email": "jennie@example.com",
+    "password": "jennie123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/20/22/45/2022453a3c7379094f0fbd2e06ac8e5e.jpg",
+    "phoneNumber": "081234567893",
+    "address": "123 Jennie Street"
+  },
+  {
+    "username": "lisa",
+    "email": "lisa@example.com",
+    "password": "lisa123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/25/5f/41/255f41ef28dc9343c0aecb2268e94485.jpg",
+    "phoneNumber": "081234567894",
+    "address": "123 Lisa Street"
+  },
+  {
+    "username": "irene",
+    "email": "irene@example.com",
+    "password": "irene123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/94/da/9e/94da9ebd7528458454166013b47af7ef.jpg",
+    "phoneNumber": "081234567895",
+    "address": "123 Irene Street"
+  },
+  {
+    "username": "seulgi",
+    "email": "seulgi@example.com",
+    "password": "seulgi123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/91/57/4e/91574e9754fefbf5e450104d2958e6c8.jpg",
+    "phoneNumber": "081234567896",
+    "address": "123 Seulgi Street"
+  },
+  {
+    "username": "wendy",
+    "email": "wendy@example.com",
+    "password": "wendy123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/c1/f2/02/c1f2022663fb9919339407a5245a816f.jpg",
+    "phoneNumber": "081234567897",
+    "address": "123 Wendy Street"
+  },
+  {
+    "username": "joy",
+    "email": "joy@example.com",
+    "password": "joy123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/84/68/28/846828f73e46e669e00071ac6d3794a9.jpg",
+    "phoneNumber": "081234567898",
+    "address": "123 Joy Street"
+  },
+  {
+    "username": "yeri",
+    "email": "yeri@example.com",
+    "password": "yeri123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/da/29/fc/da29fc081e1164bee3681e94d2a4cffe.jpg",
+    "phoneNumber": "081234567899",
+    "address": "123 Yeri Street"
+  },
+  {
+    "username": "sonyejin",
+    "email": "sonyejin@example.com",
+    "password": "sonyejin123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/ed/4c/b8/ed4cb8e3cae2451c6e7ae016112864b3.jpg",
+    "phoneNumber": "081234567891",
+    "address": "123 Son Ye-jin Street"
+  },
+  {
+    "username": "parkshinhye",
+    "email": "parkshinhye@example.com",
+    "password": "parkshinhye123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/26/df/e4/26dfe4ac1c07dddfa94230c36754aae1.jpg",
+    "phoneNumber": "081234567892",
+    "address": "123 Park Shin-hye Street"
+  },
+  {
+    "username": "junjihyun",
+    "email": "junjihyun@example.com",
+    "password": "junjihyun123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/0f/f7/10/0ff71058a8d15f9df873be76bcdba8e7.jpg",
+    "phoneNumber": "081234567893",
+    "address": "123 Jun Ji-hyun Street"
+  },
+  {
+    "username": "songhyekyo",
+    "email": "songhyekyo@example.com",
+    "password": "songhyekyo123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/8c/95/b1/8c95b19dcff60a7a8c3e845a37a5cdce.jpg",
+    "phoneNumber": "081234567894",
+    "address": "123 Song Hye-kyo Street"
+  },
+  {
+    "username": "kimtaehee",
+    "email": "kimtaehee@example.com",
+    "password": "kimtaehee123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/67/0d/98/670d9880fbc56a4fe4eb458da784eac4.jpg",
+    "phoneNumber": "081234567895",
+    "address": "123 Kim Tae-hee Street"
+  },
+  {
+    "username": "hajiwon",
+    "email": "hajiwon@example.com",
+    "password": "hajiwon123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/b6/e3/0e/b6e30eee6e47ded725a065e05f3c778e.jpg",
+    "phoneNumber": "081234567896",
+    "address": "123 Ha Ji-won Street"
+  },
+  {
+    "username": "gonghyojin",
+    "email": "gonghyojin@example.com",
+    "password": "gonghyojin123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/81/cd/a8/81cda817514405848f224e9ad17d80d8.jpg",
+    "phoneNumber": "081234567897",
+    "address": "123 Gong Hyo-jin Street"
+  },
+  {
+    "username": "baesuzy",
+    "email": "baesuzy@example.com",
+    "password": "baesuzy123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/c4/ea/89/c4ea892a7105082e68d7a6d2aa3ad611.jpg",
+    "phoneNumber": "081234567898",
+    "address": "123 Bae Suzy Street"
+  },
+  {
+    "username": "yooneunhye",
+    "email": "yooneunhye@example.com",
+    "password": "yooneunhye123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/87/57/9a/87579a9fc5a6d0e11a3feea0fcabf28b.jpg",
+    "phoneNumber": "081234567899",
+    "address": "123 Yoon Eun-hye Street"
+  },
+  {
+    "username": "hanjimin",
+    "email": "hanjimin@example.com",
+    "password": "hanjimin123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/87/f8/e7/87f8e7c4b1b1ca318af28d54188e5b4c.jpg",
+    "phoneNumber": "081234567890",
+    "address": "123 Han Ji-min Street"
+  },
+  {
+    "username": "shinminah",
+    "email": "shinminah@example.com",
+    "password": "shinminah123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/c8/b1/4e/c8b14ec58d3e6e76743ff93d3ab8035a.jpg",
+    "phoneNumber": "081234567891",
+    "address": "123 Shin Min-ah Street"
+  },
+  {
+    "username": "leesungkyung",
+    "email": "leesungkyung@example.com",
+    "password": "leesungkyung123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/f3/a2/59/f3a259363e53a2125b38d6ecea9a6078.jpg",
+    "phoneNumber": "081234567892",
+    "address": "123 Lee Sung-kyung Street"
+  },
+  {
+    "username": "hanhyojoo",
+    "email": "hanhyojoo@example.com",
+    "password": "hanhyojoo123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/5f/4a/3c/5f4a3ca299461a64438eb1f6baf537b9.jpg",
+    "phoneNumber": "081234567893",
+    "address": "123 Han Hyo-joo Street"
+  },
+  {
+    "username": "kimsohyun",
+    "email": "kimsohyun@example.com",
+    "password": "kimsohyun123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/31/16/4a/31164a326c1507d3ad659e4685fd42f0.jpg",
+    "phoneNumber": "081234567894",
+    "address": "123 Kim So-hyun Street"
+  },
+  {
+    "username": "suzy",
+    "email": "suzy@example.com",
+    "password": "suzy123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/23/6a/70/236a707c42bac983da844deabf80df1d.jpg",
+    "phoneNumber": "081234567895",
+    "address": "123 Suzy Street"
+  },
+  {
+    "username": "iu",
+    "email": "iu@example.com",
+    "password": "iu123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/e9/b4/e7/e9b4e7dc49ab20170b808f82175ebbcf.jpg",
+    "phoneNumber": "081234567896",
+    "address": "123 IU Street"
+  },
+  {
+    "username": "kimjiwon",
+    "email": "kimjiwon@example.com",
+    "password": "kimjiwon123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/71/da/51/71da510ac5bce33e64651921edc6dbc9.jpg",
+    "phoneNumber": "081234567897",
+    "address": "123 Kim Ji-won Street"
+  },
+  {
+    "username": "kimyoojung",
+    "email": "kimyoojung@example.com",
+    "password": "kimyoojung123",
+    "role": "customer",
+    "photoProfile": "https://example.com/kimyoojung.jpg",
+    "phoneNumber": "081234567898",
+    "address": "123 Kim Yoo-jung Street"
+  },
+  {
+    "username": "hansohee",
+    "email": "hansohee@example.com",
+    "password": "hansohee123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/5a/7e/58/5a7e58758b1561bdad7f0c2606a38066.jpg",
+    "phoneNumber": "081234567899",
+    "address": "123 Han So-hee Street"
+  },
+  {
+    "username": "kimgoeun",
+    "email": "kimgoeun@example.com",
+    "password": "kimgoeun123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/89/a9/cb/89a9cb71baf4d697c4ea6cc17624ce02.jpg",
+    "phoneNumber": "081234567890",
+    "address": "123 Kim Go-eun Street"
+  },
+  {
+    "username": "kimtaeri",
+    "email": "kimtaeri@example.com",
+    "password": "kimtaeri123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/0f/91/48/0f9148be7bed03b903b3904da404649b.jpg",
+    "phoneNumber": "081234567891",
+    "address": "123 Kim Tae-ri Street"
+  },
+  {
+    "username": "yoona",
+    "email": "yoona@example.com",
+    "password": "yoona123",
+    "role": "customer",
+    "photoProfile": "https://i.pinimg.com/474x/24/50/70/245070eba7f4f0086d64a59360ecbd67.jpg",
+    "phoneNumber": "081234567892",
+    "address": "123 Yoona Street"
+  },
+  {
     "username": "john_doe",
     "email": "johndoe@example.com",
     "password": "password123",
@@ -21,7 +336,7 @@
     "username": "jane_smith",
     "email": "janesmith@example.com",
     "password": "password456",
-    "role": "admin",
+    "role": "customer",
     "photoProfile": "https://img.freepik.com/free-vector/young-woman-field-character-scene_24877-57892.jpg?size=626&ext=jpg&ga=GA1.2.468604856.1683977961&semt=ais",
     "phoneNumber": "085308530853",
     "address": "456 Elm Avenue"
@@ -30,9 +345,477 @@
     "username": "jackson_davis",
     "email": "jacksondavis@example.com",
     "password": "password789",
-    "role": "admin",
+    "role": "customer",
     "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
     "phoneNumber": "085108510851",
     "address": "789 Oak Street"
+  },
+  {
+    "username": "haryowicaksono",
+    "email": "haryowicaksono@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan haryowicaksono"
+  },
+  {
+    "username": "alfandani",
+    "email": "alfandani@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan alfandani"
+  },
+  {
+    "username": "hanggahosea",
+    "email": "hanggahosea@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan hanggahosea"
+  },
+  {
+    "username": "maliksamansya",
+    "email": "maliksamansya@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan maliksamansya"
+  },
+  {
+    "username": "resairsanto",
+    "email": "resairsanto@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan resairsanto"
+  },
+  {
+    "username": "robysyahbani",
+    "email": "robysyahbani@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan robysyahbani"
+  },
+  {
+    "username": "ingghaa",
+    "email": "ingghaa@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan ingghaa"
+  },
+  {
+    "username": "fikrimarzuki",
+    "email": "fikrimarzuki@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan fikrimarzuki"
+  },
+  {
+    "username": "firdigfalakhi",
+    "email": "firdigfalakhi@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan firdigfalakhi"
+  },
+  {
+    "username": "lalurizki",
+    "email": "lalurizki@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan lalurizki"
+  },
+  {
+    "username": "shibghatallah",
+    "email": "shibghatallah@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan shibghatallah"
+  },
+  {
+    "username": "taufanadri",
+    "email": "taufanadri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan taufanadri"
+  },
+  {
+    "username": "williamalurencius",
+    "email": "williamalurencius@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan williamalurencius"
+  },
+  {
+    "username": "vince",
+    "email": "vince@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan vince"
+  },
+  {
+    "username": "danarreza",
+    "email": "danarreza@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan danarreza"
+  },
+  {
+    "username": "fernandonainggolan",
+    "email": "fernandonainggolan@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan fernandonainggolan"
+  },
+  {
+    "username": "ganangprakoso",
+    "email": "ganangprakoso@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan ganangprakoso"
+  },
+  {
+    "username": "bhagaskoroputra",
+    "email": "bhagaskoroputra@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan bhagaskoroputra"
+  },
+  {
+    "username": "peter",
+    "email": "peter@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan peter"
+  },
+  {
+    "username": "leonardoringo",
+    "email": "leonardoringo@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan leonardoringo"
+  },
+  {
+    "username": "rizkyardiansyah",
+    "email": "rizkyardiansyah@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan rizkyardiansyah"
+  },
+  {
+    "username": "abil",
+    "email": "abil@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan abil"
+  },
+  {
+    "username": "dedixmolloy",
+    "email": "dedixmolloy@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan dedixmolloy"
+  },
+  {
+    "username": "sigitprihatmoko",
+    "email": "sigitprihatmoko@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan sigitprihatmoko"
+  },
+  {
+    "username": "anissa",
+    "email": "anissa@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan anissa"
+  },
+  {
+    "username": "alvinbudih",
+    "email": "alvinbudih@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan alvinbudih"
+  },
+  {
+    "username": "pabloescobar",
+    "email": "pabloescobar@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan pabloescobar"
+  },
+  {
+    "username": "erickmanik",
+    "email": "erickmanik@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan erickmanik"
+  },
+  {
+    "username": "lydianoviana",
+    "email": "lydianoviana@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan lydianoviana"
+  },
+  {
+    "username": "naomisinaga",
+    "email": "naomisinaga@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan naomisinaga"
+  },
+  {
+    "username": "deboraputri",
+    "email": "deboraputri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan deboraputri"
+  },
+  {
+    "username": "davidbayu",
+    "email": "davidbayu@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan davidbayu"
+  },
+  {
+    "username": "johnlennon",
+    "email": "johnlennon@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan johnlennon"
+  },
+  {
+    "username": "chrismartin",
+    "email": "chrismartin@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan chrismartin"
+  },
+  {
+    "username": "billysetiawan",
+    "email": "billysetiawan@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan billysetiawan"
+  },
+  {
+    "username": "valentinorossi",
+    "email": "valentinorossi@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan valentinorossi"
+  },
+  {
+    "username": "rossianaputri",
+    "email": "rossianaputri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan rossianaputri"
+  },
+  {
+    "username": "kharynangeline",
+    "email": "kharynangeline@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan kharynangeline"
+  },
+  {
+    "username": "putraangkasa",
+    "email": "putraangkasa@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan putraangkasa"
+  },
+  {
+    "username": "angkasapura",
+    "email": "angkasapura@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan angkasapura"
+  },
+  {
+    "username": "michaelangelo",
+    "email": "michaelangelo@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan michaelangelo"
+  },
+  {
+    "username": "danielabraham",
+    "email": "danielabraham@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan danielabraham"
+  },
+  {
+    "username": "yosafat",
+    "email": "yosafat@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan yosafat"
+  },
+  {
+    "username": "sarahputri",
+    "email": "sarahputri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan sarahputri"
+  },
+  {
+    "username": "puanputri",
+    "email": "puanputri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan puanputri"
+  },
+  {
+    "username": "yuniputri",
+    "email": "yuniputri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan yuniputri"
+  },
+  {
+    "username": "yuanitaanggraeni",
+    "email": "yuanitaanggraeni@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan yuanitaanggraeni"
+  },
+  {
+    "username": "mahalini",
+    "email": "mahalini@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan mahalini"
+  },
+  {
+    "username": "gunturpramuda",
+    "email": "gunturpramuda@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan gunturpramuda"
+  },
+  {
+    "username": "farhananggoro",
+    "email": "farhananggoro@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan farhananggoro"
+  },
+  {
+    "username": "erikacantik",
+    "email": "erikacantik@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan erikacantik"
+  },
+  {
+    "username": "brendaputri",
+    "email": "brendaputri@gmail.com",
+    "password": "12345678",
+    "role": "customer",
+    "photoProfile": "https://img.freepik.com/premium-psd/3d-render-cartoon-avatar-isolated_460336-548.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=ais",
+    "phoneNumber": "085108510851",
+    "address": "Jalan brendaputri"
   }
 ]
