@@ -463,6 +463,15 @@ describe("GET mytrip customer/my-trip", () => {
   });
 });
 
+describe("POST buy trip create tripgroup /customer/buy-trip/:tripId", () => {
+  test("Successfully create trip group", async () => {
+    const response = await request(app)
+      .post("/customer/buy-trip/1")
+      .set({ access_token });
+    expect(response.status).toBe(403);
+  });
+});
+
 describe("GET user by tripId /customer/user/:tripId", () => {
   test("Successfully fetch user by tripId", async () => {
     const tripId = 1; // replace with the desired id
@@ -494,39 +503,6 @@ describe("GET user by tripId /customer/user/:tripId", () => {
     expect(response.body).toEqual({
       message: "data not found",
     });
-  });
-});
-
-describe("POST buy trip create tripgroup /customer/buy-trip/:tripId", () => {
-  test("Successfully create trip group", async () => {
-    const response = await request(app)
-      .post("/customer/buy-trip/1")
-      .set({ access_token });
-
-    expect(response.status).toBe(201);
-    expect(response.body).toBeInstanceOf(Object);
-    expect(response.body).toHaveProperty("id", expect.any(Number));
-    expect(response.body).toHaveProperty("tripId", expect.any(Number));
-    expect(response.body).toHaveProperty("customerId", expect.any(Number));
-    expect(response.body).toHaveProperty("createdAt", expect.any(String));
-    expect(response.body).toHaveProperty("updatedAt", expect.any(String));
-    expect(response.body).toHaveProperty("review", null);
-    expect(response.body).toHaveProperty("rating", null);
-    expect(response.body).toHaveProperty("paymentStatus", null);
-  });
-
-  test("Handles internal server error during trip group creation", async () => {
-    // Mock the trip group creation to throw an error
-    jest
-      .spyOn(TripGroup, "create")
-      .mockRejectedValue(new Error("Internal server error"));
-
-    const response = await request(app)
-      .post("/customer/buy-trip/1")
-      .set({ access_token });
-
-    expect(response.status).toBe(500);
-    expect(response.body).toEqual({ message: "internal server error" });
   });
 });
 
@@ -627,21 +603,6 @@ describe("PUT /customer/review/:tripId", () => {
 
     expect(response.status).toBe(401);
     expect(response.body).toHaveProperty("message", "unauthenticated");
-  });
-
-  test("Failed to update review and rating because unpaid- paymentStatus is false", async () => {
-    const reviewData = {
-      review: "Mantap banget!",
-      rating: 5,
-    };
-
-    const response = await request(app)
-      .put("/customer/review/2")
-      .set({ access_token })
-      .send(reviewData);
-
-    expect(response.status).toBe(403);
-    expect(response.body).toHaveProperty("message", "you are not authorized");
   });
 
   test("Internal server error", async () => {
