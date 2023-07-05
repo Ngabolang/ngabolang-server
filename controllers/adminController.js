@@ -1,7 +1,7 @@
 const { User, Trip, Category, Destination, TripGroup } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
-
+const { Op } = require("sequelize");
 class Controller {
   static async register(req, res, next) {
     try {
@@ -50,27 +50,59 @@ class Controller {
 
   static async getTrip(req, res, next) {
     try {
-      const trips = await Trip.findAll({
-        where: { status: true },
-        include: [
-          {
-            model: Category,
-            attributes: { exclude: ["createdAt", "updatedAt"] },
+      let trips;
+      let { search } = req.query;
+      console.log(search);
+      if (search) {
+        trips = await Trip.findAll({
+          where: {
+            status: true,
+            name: {
+              [Op.iLike]: `%${search}%`,
+            },
           },
-          {
-            model: User,
-            attributes: { exclude: ["password", "createdAt", "updatedAt"] },
-          },
-          {
-            model: Destination,
-            attributes: { exclude: ["createdAt", "updatedAt"] },
-          },
-          {
-            model: TripGroup,
-            attributes: { exclude: ["createdAt", "updatedAt"] },
-          },
-        ],
-      });
+          include: [
+            {
+              model: Category,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: User,
+              attributes: { exclude: ["password", "createdAt", "updatedAt"] },
+            },
+            {
+              model: Destination,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: TripGroup,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        });
+      } else {
+        trips = await Trip.findAll({
+          where: { status: true },
+          include: [
+            {
+              model: Category,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: User,
+              attributes: { exclude: ["password", "createdAt", "updatedAt"] },
+            },
+            {
+              model: Destination,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: TripGroup,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        });
+      }
       res.status(200).json(trips);
     } catch (error) {
       next(error);
@@ -79,27 +111,59 @@ class Controller {
 
   static async getCloseTrip(req, res, next) {
     try {
-      const trips = await Trip.findAll({
-        where: { status: false },
-        include: [
-          {
-            model: Category,
-            attributes: { exclude: ["createdAt", "updatedAt"] },
+      let trips;
+      let { search } = req.query;
+      console.log(search);
+      if (search) {
+        trips = await Trip.findAll({
+          where: {
+            status: false,
+            name: {
+              [Op.iLike]: `%${search}%`,
+            },
           },
-          {
-            model: User,
-            attributes: { exclude: ["password", "createdAt", "updatedAt"] },
-          },
-          {
-            model: Destination,
-            attributes: { exclude: ["createdAt", "updatedAt"] },
-          },
-          {
-            model: TripGroup,
-            attributes: { exclude: ["createdAt", "updatedAt"] },
-          },
-        ],
-      });
+          include: [
+            {
+              model: Category,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: User,
+              attributes: { exclude: ["password", "createdAt", "updatedAt"] },
+            },
+            {
+              model: Destination,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: TripGroup,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        });
+      } else {
+        trips = await Trip.findAll({
+          where: { status: false },
+          include: [
+            {
+              model: Category,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: User,
+              attributes: { exclude: ["password", "createdAt", "updatedAt"] },
+            },
+            {
+              model: Destination,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+            {
+              model: TripGroup,
+              attributes: { exclude: ["createdAt", "updatedAt"] },
+            },
+          ],
+        });
+      }
       res.status(200).json(trips);
     } catch (error) {
       next(error);

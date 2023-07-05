@@ -2,8 +2,8 @@ const { Category, Destination, Trip, TripGroup, User } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { OAuth2Client } = require("google-auth-library");
-const { error } = require("console");
 const midtransClient = require("midtrans-client");
+const { Op } = require("sequelize");
 
 class Controller {
   static async register(req, res, next) {
@@ -91,20 +91,43 @@ class Controller {
 
   static async getTrips(req, res, next) {
     try {
-      const trips = await Trip.findAll({
-        include: [
-          {
-            model: Category,
+      let trips;
+      let { search } = req.query;
+      console.log(search);
+      if (search) {
+        trips = await Trip.findAll({
+          where: {
+            name: {
+              [Op.iLike]: `%${search}%`,
+            },
           },
-          {
-            model: Destination,
-          },
-        ],
-        order: [["createdAt", "DESC"]],
-      });
+          include: [
+            {
+              model: Category,
+            },
+            {
+              model: Destination,
+            },
+          ],
+          order: [["createdAt", "DESC"]],
+        });
+      } else {
+        trips = await Trip.findAll({
+          include: [
+            {
+              model: Category,
+            },
+            {
+              model: Destination,
+            },
+          ],
+          order: [["createdAt", "DESC"]],
+        });
+      }
       if (trips.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(trips);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
