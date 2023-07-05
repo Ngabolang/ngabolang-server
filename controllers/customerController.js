@@ -3,7 +3,7 @@ const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
 const { OAuth2Client } = require("google-auth-library");
 const { error } = require("console");
-const midtransClient = require("midtrans-client")
+const midtransClient = require("midtrans-client");
 
 class Controller {
   static async register(req, res, next) {
@@ -45,7 +45,7 @@ class Controller {
         username: user.username,
         email: user.email,
         photoProfile: user.photoProfile,
-        id:user.id,
+        id: user.id,
         message: `${user.username} is successfully logged in`,
       });
     } catch (error) {
@@ -212,6 +212,18 @@ class Controller {
   static async createTripGroup(req, res, next) {
     try {
       const { tripId } = req.params;
+
+      const isBuy = await TripGroup.findOne({
+        where: {
+          customerId: req.user.id,
+          tripId: tripId,
+        },
+      });
+      if (isBuy)
+        throw {
+          name: "buy",
+        };
+
       const tripgroup = await TripGroup.create({
         tripId: tripId,
         customerId: req.user.id,
@@ -266,8 +278,8 @@ class Controller {
         order: [["createdAt", "DESC"]],
       });
       if (!tripgroup) throw { name: "dataNotFound" };
-      if (tripgroup.paymentStatus === true) throw { name: "Paid" };
-   
+      if (tripgroup.paymentStatus === true) throw { name: "forbidden" };
+
       //generate midtrans token
       let snap = new midtransClient.Snap({
         // Set to true if you want Production Environment (accept real transaction).

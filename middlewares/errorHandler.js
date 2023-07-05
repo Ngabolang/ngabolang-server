@@ -28,6 +28,10 @@ module.exports = (error, req, res, next) => {
       status = 403;
       message = "you are not authorized";
       break;
+    case "buy":
+      status = 403;
+      message = "you are already buy this tri[";
+      break;
     case "dataNotFound":
       status = 404;
       message = "data not found";
