@@ -251,6 +251,8 @@ class Controller {
         tripId: tripId,
         customerId: req.user.id,
         paymentStatus: false,
+        review: null,
+        rating: 0,
       });
       res.status(201).json(tripgroup);
     } catch (error) {
@@ -361,6 +363,14 @@ class Controller {
   static async getAllTripGroups(req, res, next) {
     try {
       const tripgroups = await TripGroup.findAll({
+        where: {
+          review: {
+            [Op.or]: {
+              [Op.ne]: null,
+              [Op.ne]: "",
+            },
+          },
+        },
         include: [
           {
             model: User,
@@ -373,16 +383,9 @@ class Controller {
         order: [["createdAt", "DESC"]],
       });
 
-      const tripGroupsWithReview = tripgroups.filter(
-        (tripgroup) => tripgroup.review.length !== 0
-      );
-
-      if (tripGroupsWithReview.length === 0) {
-        return res.status(200).json({ message: "No data available." });
-      }
-
-      res.status(200).json(tripGroupsWithReview);
+      res.status(200).json(tripgroups);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
