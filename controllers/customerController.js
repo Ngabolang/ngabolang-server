@@ -343,6 +343,9 @@ class Controller {
             model: User,
             attributes: { exclude: "password" },
           },
+          {
+            model: Trip,
+          },
         ],
         order: [["createdAt", "DESC"]],
       });
