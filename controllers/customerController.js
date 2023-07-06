@@ -25,6 +25,7 @@ class Controller {
         message: `Succesfully registered`,
       });
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -49,6 +50,7 @@ class Controller {
         message: `${user.username} is successfully logged in`,
       });
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -147,6 +149,7 @@ class Controller {
       if (trips.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(trips);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -182,6 +185,7 @@ class Controller {
       if (trips.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(trips);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -208,6 +212,7 @@ class Controller {
       if (tripgroups.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(tripgroups);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -228,6 +233,7 @@ class Controller {
       if (user.length == 0) throw { name: "dataNotFound" };
       res.status(200).json(user);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -256,6 +262,7 @@ class Controller {
       });
       res.status(201).json(tripgroup);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -281,6 +288,7 @@ class Controller {
 
       res.status(200).json(patchedTripgroup);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -328,6 +336,7 @@ class Controller {
       let midtransToken = await snap.createTransaction(parameter);
       res.status(201).json(midtransToken);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -356,6 +365,7 @@ class Controller {
       const updatedTripgroud = await tripgroup.save();
       res.status(200).json(updatedTripgroud);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
@@ -397,6 +407,7 @@ class Controller {
       });
       res.status(200).json(categories);
     } catch (error) {
+      console.log(error);
       next(error);
     }
   }
