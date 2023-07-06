@@ -18,5 +18,9 @@
   {
     "name": "Camps",
     "imgUrl": "https://img.freepik.com/premium-photo/bonfire-near-camping-tents-outdoors-night_495423-58159.jpg?size=626&ext=jpg&uid=R41671461&ga=GA1.2.468604856.1683977961&semt=sph"
+  },
+  {
+    "name" : "City",
+		"imgUrl" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Bandung_View_dari_Gedung_Wisma_HSBC_Asia_Afrika_4.jpg/1200px-Bandung_View_dari_Gedung_Wisma_HSBC_Asia_Afrika_4.jpg"
   }
 ]

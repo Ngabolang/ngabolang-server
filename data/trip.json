@@ -94,5 +94,20 @@
     "meetingPoint": "Jakarta",
     "location": "Belitung",
     "limit": 10
-  }
+  },
+  {
+		"name" : "Trip To Bandung",
+		"categoryId" : 6,
+		"adminId" : 3,
+		"date" : "2023-07-29T00:00:00.000Z",
+		"price" : 715000,
+		"status" : true,
+		"imgUrl" : "https://asset.kompas.com/crops/f_n7pTyUiR0ZFvXeVeJ5vf_zocY=/0x0:780x520/750x500/data/photo/2022/10/17/634d709a4065c.jpg",
+		"videoUrl" : "https://youtu.be/DVNoxujDugo",
+		"duration" : 2,
+		"meetingPoint" : "Stasiun Bandung",
+		"location" : "Bandung",
+		"limit" : 10,
+		"description" : "Bandung yang menjadi satu dari beberapa kota dengan wisata terbaiknya sangat rekomended untuk anda kunjungi ketika menghabiskan waktu berlibur. Wisata alam, wisata kuliner, wisata belanja dan lainnya di Bandung akan membawa anda dalam ueforia holiday yang menyenangkan."
+	}
 ]
