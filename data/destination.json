@@ -240,80 +240,220 @@
     "activity": "Diving"
   },
   {
-		"tripId" : 7,
-		"name" : "The Lodge Maribaya",
-		"imgUrl" : "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/qk8xfqrrkt7bxj3x7a6l/TiketMasukTheLodgeMaribayadiBandung.jpg",
-		"labelDay" : 1,
-		"startHour" : "01:00:00Z",
-		"longitude" : "107.6623573",
-		"latitude" : "-6.867386799999999",
-		"activity" : "Tour dan Enjoy Suasana",
-		"placeId" : null
-	},
-	{
-		"tripId" : 7,
-		"name" : "Curug Pelangi",
-		"imgUrl" : "https://www.pinhome.id/info-area/wp-content/uploads/2022/04/46694267_250205232314626_6737470435086041088_n.jpeg",
-		"labelDay" : 1,
-		"startHour" : "03:00:00Z",
-		"longitude" : "107.5782344",
-		"latitude" : "-6.797712499999999",
-		"activity" : "Tour dan Enjoy Suasana",
-		"placeId" : null
-	},
-	{
-		"tripId" : 7,
-		"name" : "Dusun Bambu",
-		"imgUrl" : "https://asset.kompas.com/crops/05ubZiMPE2euuSbDDy8PccRawpY=/3x13:980x665/750x500/data/photo/2022/03/27/624075ff5d605.jpg",
-		"labelDay" : 1,
-		"startHour" : "05:00:00Z",
-		"longitude" : "107.5791627",
-		"latitude" : "-6.7897147",
-		"activity" : "Makan siang",
-		"placeId" : null
-	},
-	{
-		"tripId" : 7,
-		"name" : "Braga",
-		"imgUrl" : "https://asset.kompas.com/crops/0GiQOXlyFIL68E_gQC4YzU3lyvk=/0x0:1200x800/750x500/data/photo/2019/10/17/5da7fb5e171f6.jpg",
-		"labelDay" : 1,
-		"startHour" : "07:00:00Z",
-		"longitude" : "107.6094341",
-		"latitude" : "-6.9178283",
-		"activity" : "City Tour",
-		"placeId" : null
-	},
-	{
-		"tripId" : 7,
-		"name" : "Gedung Asia-Afrika",
-		"imgUrl" : "https://badan-penghubung.jabarprov.go.id/wp-content/uploads/2020/12/Gedung-Merdeka.jpg",
-		"labelDay" : 1,
-		"startHour" : "09:00:00Z",
-		"longitude" : "107.6093447",
-		"latitude" : "-6.920905400000001",
-		"activity" : "Berkunjung ke gedung merdeka",
-		"placeId" : null
-	},
-	{
-		"tripId" : 7,
-		"name" : "China Town Bandung",
-		"imgUrl" : "https://2.bp.blogspot.com/-LqpKO0o4Idk/WZnLLE2KcxI/AAAAAAAAFLc/7dLz-GiTg2MDjJ_F2Cp2ibi4vKMHidM-gCLcBGAs/s1600/Chinatown%2BJalan%2BKelenteng%2BBandung.jpg",
-		"labelDay" : 2,
-		"startHour" : "04:00:00Z",
-		"longitude" : "107.592818",
-		"latitude" : "-6.917315",
-		"activity" : "Makan siang dan wisata kuliner",
-		"placeId" : null
-	},
-	{
-		"tripId" : 7,
-		"name" : "Pusat Oleh-oleh khas Bandung",
-		"imgUrl" : "https://4.bp.blogspot.com/-lCV9ZJycep4/UZnve3caB0I/AAAAAAAAFBM/BmrZxzl6nfg/s1600/Bandung_1.jpg",
-		"labelDay" : 2,
-		"startHour" : "07:00:00Z",
-		"longitude" : "107.5927196",
-		"latitude" : "-6.897888399999999",
-		"activity" : "Berbelanja oleh oleh",
-		"placeId" : null
-	}
+    "tripId": 7,
+    "name": "The Lodge Maribaya",
+    "imgUrl": "https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_863/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/qk8xfqrrkt7bxj3x7a6l/TiketMasukTheLodgeMaribayadiBandung.jpg",
+    "labelDay": 1,
+    "startHour": "01:00:00Z",
+    "longitude": "107.6623573",
+    "latitude": "-6.867386799999999",
+    "activity": "Tour dan Enjoy Suasana",
+    "placeId": null
+  },
+  {
+    "tripId": 7,
+    "name": "Curug Pelangi",
+    "imgUrl": "https://www.pinhome.id/info-area/wp-content/uploads/2022/04/46694267_250205232314626_6737470435086041088_n.jpeg",
+    "labelDay": 1,
+    "startHour": "03:00:00Z",
+    "longitude": "107.5782344",
+    "latitude": "-6.797712499999999",
+    "activity": "Tour dan Enjoy Suasana",
+    "placeId": null
+  },
+  {
+    "tripId": 7,
+    "name": "Dusun Bambu",
+    "imgUrl": "https://asset.kompas.com/crops/05ubZiMPE2euuSbDDy8PccRawpY=/3x13:980x665/750x500/data/photo/2022/03/27/624075ff5d605.jpg",
+    "labelDay": 1,
+    "startHour": "05:00:00Z",
+    "longitude": "107.5791627",
+    "latitude": "-6.7897147",
+    "activity": "Makan siang",
+    "placeId": null
+  },
+  {
+    "tripId": 7,
+    "name": "Braga",
+    "imgUrl": "https://asset.kompas.com/crops/0GiQOXlyFIL68E_gQC4YzU3lyvk=/0x0:1200x800/750x500/data/photo/2019/10/17/5da7fb5e171f6.jpg",
+    "labelDay": 1,
+    "startHour": "07:00:00Z",
+    "longitude": "107.6094341",
+    "latitude": "-6.9178283",
+    "activity": "City Tour",
+    "placeId": null
+  },
+  {
+    "tripId": 7,
+    "name": "Gedung Asia-Afrika",
+    "imgUrl": "https://badan-penghubung.jabarprov.go.id/wp-content/uploads/2020/12/Gedung-Merdeka.jpg",
+    "labelDay": 1,
+    "startHour": "09:00:00Z",
+    "longitude": "107.6093447",
+    "latitude": "-6.920905400000001",
+    "activity": "Berkunjung ke gedung merdeka",
+    "placeId": null
+  },
+  {
+    "tripId": 7,
+    "name": "China Town Bandung",
+    "imgUrl": "https://2.bp.blogspot.com/-LqpKO0o4Idk/WZnLLE2KcxI/AAAAAAAAFLc/7dLz-GiTg2MDjJ_F2Cp2ibi4vKMHidM-gCLcBGAs/s1600/Chinatown%2BJalan%2BKelenteng%2BBandung.jpg",
+    "labelDay": 2,
+    "startHour": "04:00:00Z",
+    "longitude": "107.592818",
+    "latitude": "-6.917315",
+    "activity": "Makan siang dan wisata kuliner",
+    "placeId": null
+  },
+  {
+    "tripId": 7,
+    "name": "Pusat Oleh-oleh khas Bandung",
+    "imgUrl": "https://4.bp.blogspot.com/-lCV9ZJycep4/UZnve3caB0I/AAAAAAAAFBM/BmrZxzl6nfg/s1600/Bandung_1.jpg",
+    "labelDay": 2,
+    "startHour": "07:00:00Z",
+    "longitude": "107.5927196",
+    "latitude": "-6.897888399999999",
+    "activity": "Berbelanja oleh oleh",
+    "placeId": null
+  },
+  {
+    "tripId": 8,
+    "name": "Museum De Mata",
+    "imgUrl": "https://2.bp.blogspot.com/-Xki0VON3ZPQ/Vxc6vh4BQ6I/AAAAAAAAAc0/9NQUZbPQyqUqoBSj5f0dG640-yawqeDGQCLcB/s640/De%2BMata%2BJogja.jpg",
+    "labelDay": 1,
+    "startHour": "09:00",
+    "latitude": "-7.8164471",
+    "longitude": "110.3847654",
+    "activity": "Jelajah museum 3D dan foto-foto, yuhu"
+  },
+  {
+    "tripId": 8,
+    "name": "Alun-alun Kidul Yogyakarta",
+    "imgUrl": "https://visitingjogja.jogjaprov.go.id/web/wp-content/uploads/2021/02/170694033_473241550780871_858495986566598445_n.jpg",
+    "labelDay": 1,
+    "startHour": "18:00",
+    "latitude": "-7.8118782",
+    "longitude": "110.1766164",
+    "activity": "Main-main di Alun-alun Kidul Yogyakarta, acara bebas"
+  },
+  {
+    "tripId": 8,
+    "name": "Museum Kereta Api Ambarawa",
+    "imgUrl": "https://marketplus.co.id/wp-content/uploads/2022/04/Picture1-copy-2.jpg",
+    "labelDay": 2,
+    "startHour": "10:00",
+    "latitude": "-7.2647581",
+    "longitude": "110.4011716",
+    "activity": "Melihat sejarah kereta api oleh KAI, yuk foto-foto lagi!"
+  },
+  {
+    "tripId": 8,
+    "name": "Tebing Breksi",
+    "imgUrl": "https://asset.kompas.com/crops/j9iyPtdVQ0ldfmyNOVhsX6Z7HMo=/0x0:1037x691/750x500/data/photo/2021/09/29/6154025ebec57.jpg",
+    "labelDay": 3,
+    "startHour": "09:00",
+    "latitude": "-7.7815714",
+    "longitude": "110.5022009",
+    "activity": "Melihat keindahan alam tebing breksi, foto-foto lagi!"
+  },
+  {
+    "tripId": 8,
+    "name": "Candi Prambanan",
+    "imgUrl": "https://akcdn.detik.net.id/visual/2020/10/21/candi-prambanan_169.jpeg?w=650",
+    "labelDay": 3,
+    "startHour": "14:00",
+    "latitude": "-7.7520206",
+    "longitude": "110.4866018",
+    "activity": "Tapak tilas Candi Prambanan. Jas Merah! Jangan sekali-sekali kita melupakan sejarah!"
+  },
+  {
+    "tripId": 9,
+    "name": "Pura Ulun Danu Beratan",
+    "imgUrl": "https://asset.kompas.com/crops/mVZPuWpAci0WHFApvcAGKA8Zgq0=/0x0:1280x853/750x500/data/photo/2022/05/20/628753ad3ef58.jpg",
+    "labelDay": 1,
+    "startHour": "09:00",
+    "latitude": "-8.2751807",
+    "longitude": "115.1642431",
+    "activity": "Yok kita liat pura yang ada di duit 50 rebuan dulu!"
+  },
+  {
+    "tripId": 9,
+    "name": "Garuda Wisnu Kencana",
+    "imgUrl": "https://asset.kompas.com/crops/fhyXeS2borIrSmZbPebufHwNVdQ=/12x8:993x662/750x500/data/photo/2018/09/27/1679906755.jpg",
+    "labelDay": 1,
+    "startHour": "14:00",
+    "latitude": "-8.8122682",
+    "longitude": "115.1658162",
+    "activity": "Jadi anak artsy dulu gengs, ini patung mah udah legend banget lah! Cus foto!"
+  },
+  {
+    "tripId": 9,
+    "name": "Desa Wisata Panglipuran",
+    "imgUrl": "https://www.indonesia.travel/content/dam/indtravelrevamp/en/trip-ideas/intip-yuk-daya-tarik-yang-ditawarkan-desa-penglipuran-bali/thumbnail.jpg",
+    "labelDay": 2,
+    "startHour": "09:00",
+    "latitude": "-8.4222473",
+    "longitude": "115.3567257",
+    "activity": "Yuk kita melihat kearifan lokal desa paling bersih di dunia!"
+  },
+  {
+    "tripId": 9,
+    "name": "Bandar Udara Ngurah Rai",
+    "imgUrl": "https://asset.kompas.com/crops/jvoZStZdnyog0ZOgbss-L6NzUfE=/0x0:1017x678/750x500/data/photo/2021/10/05/615c1e1512f64.jpeg",
+    "labelDay": 3,
+    "startHour": "09:00",
+    "latitude": "-8.7467172",
+    "longitude": "115.1642067",
+    "activity": "Mari pulang marilah pulang!"
+  },
+  {
+    "tripId": 10,
+    "name": "Kuil Sam Poo Kong",
+    "imgUrl": "https://phinemo.com/wp-content/uploads/2017/09/1.jpg",
+    "labelDay": 1,
+    "startHour": "09:00",
+    "latitude": "-6.9963",
+    "longitude": "107.9590352",
+    "activity": "Melihat tempat ibadah Sam Poo Kong, indahnya keberagaman"
+  },
+  {
+    "tripId": 10,
+    "name": "Kota Lama",
+    "imgUrl": "https://akcdn.detik.net.id/visual/2019/12/30/0db2af9a-adb0-4f99-8dec-721a5edc2112_169.jpeg?w=650",
+    "labelDay": 1,
+    "startHour": "14:00",
+    "latitude": "-6.9681399",
+    "longitude": "110.4252808",
+    "activity": "Burung kenari burung kakaktua, belinya jangan pake parang. Yuk kita ke Kota Tua, yang adanya di Semarang"
+  },
+  {
+    "tripId": 10,
+    "name": "Bandar Udara Internasional Jenderal Ahmad Yani (SRG)",
+    "imgUrl": "https://cdn.antaranews.com/cache/800x533/2021/08/06/IMG-20210806-WA0009_2.jpg",
+    "labelDay": 2,
+    "startHour": "09:00",
+    "latitude": "-6.966126",
+    "longitude": "110.3724279",
+    "activity": "Burung kenari burung kakaktua, belinya jangan pake parang. Yuk kita ke Kota Tua, yang adanya di Semarang"
+  },
+  {
+    "tripId": 6,
+    "name": "Pantai Tanjung Pendam",
+    "imgUrl": "https://indonesiakaya.com/wp-content/uploads/2020/10/12_Pantai_Tanjung_Pendam_paling_mudah_diakses_dari_pusat_Kota_Belitung_dan_membutuhkan_waktu_45_menit_dari_bandara_menuju_pantai_ini.jpg",
+    "labelDay": 1,
+    "startHour": "09:00",
+    "latitude": "-2.7485783",
+    "longitude": "107.6286213",
+    "activity": "Main air di pantai"
+  },
+  {
+    "tripId": 6,
+    "name": "SD Muhammadiyah Laskar Pelangi",
+    "imgUrl": "https://jadesta.kemenparekraf.go.id/imgpost/33429.jpg",
+    "labelDay": 2,
+    "startHour": "09:00",
+    "latitude": "-2.9638223",
+    "longitude": "108.1498992",
+    "activity": "Melihat Sd film laskar pelangi"
+  }
 ]
